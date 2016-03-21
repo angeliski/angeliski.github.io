@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>equals e hashCode : O que é,porque usar e como implementar | Rogerio Angeliski</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="java,busca otimizada,equals,estrutura de dados,hash,tabela de disperção,tabela de espalhamento,tabela hash" />
+    
+    <meta name="description" content="equals e hashCode : O que é,porque usar e como implementar">
+<meta property="og:type" content="article">
+<meta property="og:title" content="equals e hashCode : O que é,porque usar e como implementar">
+<meta property="og:url" content="http://angeliski.github.io/2014/01/05/equals-hash/index.html">
+<meta property="og:site_name" content="Rogerio Angeliski">
+<meta property="og:description" content="equals e hashCode : O que é,porque usar e como implementar">
+<meta property="og:image" content="http://angeliski.github.io/images/tio.jpg">
+<meta property="og:updated_time" content="2016-03-20T23:18:34.885Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="equals e hashCode : O que é,porque usar e como implementar">
+<meta name="twitter:description" content="equals e hashCode : O que é,porque usar e como implementar">
+<meta name="twitter:image" content="http://angeliski.github.io/images/tio.jpg">
+    
+
+    
+
+    
+
+    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/vendor/titillium-web/styles.css">
+    <link rel="stylesheet" href="/vendor/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+    
+    
+        <link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+    
+    
+    
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Web Developer</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about.html">Sobre</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Busca"><input type="hidden" name="sitesearch" value="http://angeliski.github.io"></form>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Programacao/">Programação</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-equals-hash" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        equals e hashCode : O que é,porque usar e como implementar
+        </h1>
+    
+
+            </header>
+        
+        <div class="article-subtitle">
+            <a href="/2014/01/05/equals-hash/" class="article-date">
+    <time datetime="2014-01-05T02:00:00.000Z" itemprop="datePublished">05/01/14</time>
+</a>
+            
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/busca-otimizada/">busca otimizada</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/equals/">equals</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/estrutura-de-dados/">estrutura de dados</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hash/">hash</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tabela-de-dispercao/">tabela de disperção</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tabela-de-espalhamento/">tabela de espalhamento</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tabela-hash/">tabela hash</a></li></ul>
+
+        </div>
+        <div class="article-entry" itemprop="articleBody">
+            <p>Hash e Equals</p>
+<p>Uma das duvidas mais comuns para os programadores que estão começando em java é sobre a dupla “equals e hashCode”.O hashCode é uma ferramenta da JVM usada para montar a tabela de hash de modo correto.</p>
+<p>“Ham? Do que você ta falando velho?”</p>
+<p>Tabela Hash [ou Tabela de Dispersão ou Tabela de Espalhamento] é uma tabela onde as informações são armazenadas conforme um “numero hash” calculado com base nas propriedades da informação. Isso permite que seja muito rápido recuperar uma informação na tabela.</p>
+<p>Vamos exemplificar o negócio: você tem uma tabela com as informações de todos os pacientes de um hospital. Se você fosse buscar um paciente em especial iria demorar um tempo (O(n) numa busca linear ou O(log N) para buscas binarias) o que pode ser extremamente ruim em uma situação real onde existe um volume de dados gigantescos. Usando uma tabela hash a busca reduz seu tempo de busca (O(1)) para qualquer situação, bastando apenas o calculo do valor hash na entrada e na saída da informação.</p>
+<p>Um ultimo exemplo pra quem ainda não compreendeu, imagine que a tabela hash é um armário cheio de gavetas, todas com um numero na frente. Toda vez que você vai guardar alguma coisa nesse armário, primeiro se calcula um hash dessa informação [ o como a gente explica depois] e com esse número nós colocamos na gaveta especifica. Se alguns anos mais tarde precisar dessa informação, apenas calculando o hash nós podemos ir direto na gaveta certa!!!</p>
+<p>“O LOKO CARA! Entendi essa parada mas… e se tiver mais de uma informação nessa gaveta?!”</p>
+<p>Se entendeu a parada mesmo. A ideia de uma boa função hash é garantir que só ela esteja em uma determinada “gaveta”, só que infelizmente isso nem sempre é possível. Quando mais de uma informação acabe em um mesmo <strong>bucket</strong>[apenas uma outra forma de se referir a “gaveta” ] acontece o que chamamos de colisão na tabela hash. Ainda assim é a melhor estratégia, pois temos que procurar apenas entre poucos objetos ao invés daquela volumosa quantidade de antes.</p>
+<p>Toda essa explicação de hash é algo independente da linguagem, tabelas hash podem ser usadas em diversos cenários onde exista a informação de armazenar e recuperar informações de modo otimizado e eficiente. O java se utiliza desses conceitos para melhorar suas estruturas e prover melhores buscas.</p>
+<p>“Angeliski, se falou muito desse tal hash… onde entra o equals?”</p>
+<p>Lembra que eu disse que pode haver uma colisão de informações? ou seja, podem ter dois dados num mesmo <strong>bucket.</strong>Através do método equals você pode determinar se os objetos são iguais. A ideia do equals é garantir que dois objetos são “significativamente iguais”, ou seja, que os objetos tem uma valor igual dadas as suas propriedades.</p>
+<blockquote>
+<p>“Falar é fácil, me mostre o código.<br>Linus Torvalds”</p>
+</blockquote>
+<h2 id="Como-implementar"><a href="#Como-implementar" class="headerlink" title="Como implementar?"></a><strong>Como implementar?</strong></h2><figure class="highlight java"><figcaption><span>Classe Pessoa</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Pessoa</span> </span>&#123;</span><br><span class="line">String nome;</span><br><span class="line">String sobrenome;</span><br><span class="line">String idade;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Como podemos definir que duas pessoas são “significativamente iguais”? Vamos dizer que toda pessoa com o mesmo nome e com a mesma idade é igual, modificando nossa classe ela fica assim:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Pessoa</span> </span>&#123;</span><br><span class="line">	String nome;</span><br><span class="line">	String sobrenome;</span><br><span class="line">	String idade;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object obj)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (!(obj <span class="keyword">instanceof</span> Pessoa))</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">		Pessoa other = (Pessoa) obj;</span><br><span class="line">		<span class="keyword">if</span> (!<span class="keyword">this</span>.nome.equals(other.nome) || !<span class="keyword">this</span>.idade.equals(other.idade))</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Essa é uma implementação muito simples do método, não fazemos verificações de nulo por exemplo, mas ela é bem didática. O importante é que com esse método garantimos que um objeto com mesmo nome e idade vai ser sempre considerado igual.<br>“Olha, você ta explicando e tal…mas isso pode não dar muito certo… e se o sobrenome for diferente? Não vai ser a mesma pessoa.”<br>Exatamente gafanhoto! Um dos “problemas” em se implementar o equals é garantir que as informações usadas vão garantir que os objetos são os mesmos, por isso a ideia do “valor significativo”, cabe ao desenvolvedor decidir isso.</p>
+<p>Outra coisa importante é: hashCode e equals andam juntos! Se você implementar um DEVE fazer o mesmo com o outro. não vai dar erro se não o fizer, mas a chance de alguma lógica dar errado por conta disso é muito grande.</p>
+<figure><br>    <img src="/images/tio.jpg" alt="Mais uma coisa!"><br>    <figcaption>“Mais uma coisa!”</figcaption><br></figure>
+
+<p>Segundo a Documentação do Java, o contrato(Regras) de equals() segue as seguintes diretrizes:</p>
+<ul>
+<li>É reflexivo: para qualquer valor de referência x, x.equals() deve<br>retornar true;</li>
+<li>É simétrico: para qualquer valor de referência x e y, x.equals(y) deve retornar true se, e somente se, y.equals(x) retornar true.</li>
+<li>É transitivo: para qualquer valor de referência de x, y e z, se x.equals(y) retornar true e y.equals(z) também retornar true, então, x.equals(z) deve retornar true.</li>
+<li>É consistente: para qualquer valor de referência de x e y, múltiplas chamadas de x.equals(y) retornarão consistentemente true ou consistentemente false, contanto que nenhuma informação usada nas comparações do objeto de equals tenha sido alterada.</li>
+<li>Para qualquer valor de referência x que não seja null, x.equals(null) deve retornar false.</li>
+</ul>
+<p>Como dito, são diretrizes, você não as precisa seguir. Só que sem seguir elas, sua implementação do equals não vai ser eficiente nem vai atender suas necessidades.[siga as diretrizes cara, vai por mim.]</p>
+<p>“Angeliski, eu não tenho ideia de como fazer um equals e hashCode!! E agora?”</p>
+<p>A maneira mais simples (que pode não ser a mais eficiente) é pedir para a IDE gerar isso pra você. Veja o código gerado para a nossa classe:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Pessoa</span> </span>&#123;</span><br><span class="line">	String nome;</span><br><span class="line">	String sobrenome;</span><br><span class="line">	String idade;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">final</span> <span class="keyword">int</span> prime = <span class="number">31</span>;</span><br><span class="line">		<span class="keyword">int</span> result = <span class="number">1</span>;</span><br><span class="line">		result = prime * result + ((idade == <span class="keyword">null</span>) ? <span class="number">0</span> : idade.hashCode());</span><br><span class="line">		result = prime * result + ((nome == <span class="keyword">null</span>) ? <span class="number">0</span> : nome.hashCode());</span><br><span class="line">		result = prime * result</span><br><span class="line">				+ ((sobrenome == <span class="keyword">null</span>) ? <span class="number">0</span> : sobrenome.hashCode());</span><br><span class="line">		<span class="keyword">return</span> result;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object obj)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="keyword">this</span> == obj)</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">		<span class="keyword">if</span> (obj == <span class="keyword">null</span>)</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">		<span class="keyword">if</span> (getClass() != obj.getClass())</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">		Pessoa other = (Pessoa) obj;</span><br><span class="line">		<span class="keyword">if</span> (idade == <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span> (other.idade != <span class="keyword">null</span>)</span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (!idade.equals(other.idade))</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">		<span class="keyword">if</span> (nome == <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span> (other.nome != <span class="keyword">null</span>)</span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (!nome.equals(other.nome))</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">		<span class="keyword">if</span> (sobrenome == <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span> (other.sobrenome != <span class="keyword">null</span>)</span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (!sobrenome.equals(other.sobrenome))</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Por padrão as classes tem a implementação do equals da classe Object, que apenas verifica se os dois objetos tem o mesmo endereço de memória, nem sempre isso é util para nosso código.</p>
+<h2 id="Porque-usar"><a href="#Porque-usar" class="headerlink" title="Porque usar"></a><strong>Porque usar</strong></h2><p>A maior vantagem em sobrescrever esses métodos é melhorar a busca dos objetos. Vamos a um exemplo:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BuscaPessoa</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> PessoaFisica <span class="title">buscaPessoaPorCpf</span><span class="params">(List pessoas, String cpf)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> (PessoaFisica pessoaFisica : pessoas) &#123;</span><br><span class="line">			<span class="keyword">if</span> (pessoaFisica.cpf.equals(cpf))</span><br><span class="line">				<span class="keyword">return</span> pessoaFisica;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="class"><span class="keyword">class</span> <span class="title">PessoaFisica</span> </span>&#123;</span><br><span class="line">		String cpf;</span><br><span class="line"></span><br><span class="line">		<span class="meta">@Override</span></span><br><span class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">			<span class="keyword">final</span> <span class="keyword">int</span> prime = <span class="number">31</span>;</span><br><span class="line">			<span class="keyword">int</span> result = <span class="number">1</span>;</span><br><span class="line">			result = prime * result + getOuterType().hashCode();</span><br><span class="line">			result = prime * result + ((cpf == <span class="keyword">null</span>) ? <span class="number">0</span> : cpf.hashCode());</span><br><span class="line">			<span class="keyword">return</span> result;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="meta">@Override</span></span><br><span class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object obj)</span> </span>&#123;</span><br><span class="line">			<span class="keyword">if</span> (<span class="keyword">this</span> == obj)</span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">			<span class="keyword">if</span> (obj == <span class="keyword">null</span>)</span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">			<span class="keyword">if</span> (getClass() != obj.getClass())</span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">			PessoaFisica other = (PessoaFisica) obj;</span><br><span class="line">			<span class="keyword">if</span> (!getOuterType().equals(other.getOuterType()))</span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">			<span class="keyword">if</span> (cpf == <span class="keyword">null</span>) &#123;</span><br><span class="line">				<span class="keyword">if</span> (other.cpf != <span class="keyword">null</span>)</span><br><span class="line">					<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">			&#125; <span class="keyword">else</span> <span class="keyword">if</span> (!cpf.equals(other.cpf))</span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="function"><span class="keyword">private</span> BuscaPessoa <span class="title">getOuterType</span><span class="params">()</span> </span>&#123;</span><br><span class="line">			<span class="keyword">return</span> BuscaPessoa.<span class="keyword">this</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Como você pode ver nesse código, temos necessariamente que percorrer a lista para poder localizar nosso objeto, agora vamos ver um modo mais eficiente de fazer isso:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BuscaPessoa</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> PessoaFisica <span class="title">buscaPessoaPorCpf</span><span class="params">(List pessoas, String cpf)</span> </span>&#123;</span><br><span class="line">		PessoaFisica pessoaFisica = <span class="keyword">new</span> PessoaFisica();</span><br><span class="line">		pessoaFisica.cpf = cpf;</span><br><span class="line">		<span class="keyword">int</span> indexOfPessoa = pessoas.indexOf(pessoaFisica);</span><br><span class="line">		<span class="keyword">if</span> (indexOfPessoa &gt; <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> pessoas.get(indexOfPessoa);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="class"><span class="keyword">class</span> <span class="title">PessoaFisica</span> </span>&#123;</span><br><span class="line">		String cpf;</span><br><span class="line"></span><br><span class="line">		<span class="meta">@Override</span></span><br><span class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">			<span class="keyword">final</span> <span class="keyword">int</span> prime = <span class="number">31</span>;</span><br><span class="line">			<span class="keyword">int</span> result = <span class="number">1</span>;</span><br><span class="line">			result = prime * result + getOuterType().hashCode();</span><br><span class="line">			result = prime * result + ((cpf == <span class="keyword">null</span>) ? <span class="number">0</span> : cpf.hashCode());</span><br><span class="line">			<span class="keyword">return</span> result;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="meta">@Override</span></span><br><span class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object obj)</span> </span>&#123;</span><br><span class="line">			<span class="keyword">if</span> (<span class="keyword">this</span> == obj)</span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">			<span class="keyword">if</span> (obj == <span class="keyword">null</span>)</span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">			<span class="keyword">if</span> (getClass() != obj.getClass())</span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">			PessoaFisica other = (PessoaFisica) obj;</span><br><span class="line">			<span class="keyword">if</span> (!getOuterType().equals(other.getOuterType()))</span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">			<span class="keyword">if</span> (cpf == <span class="keyword">null</span>) &#123;</span><br><span class="line">				<span class="keyword">if</span> (other.cpf != <span class="keyword">null</span>)</span><br><span class="line">					<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">			&#125; <span class="keyword">else</span> <span class="keyword">if</span> (!cpf.equals(other.cpf))</span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="function"><span class="keyword">private</span> BuscaPessoa <span class="title">getOuterType</span><span class="params">()</span> </span>&#123;</span><br><span class="line">			<span class="keyword">return</span> BuscaPessoa.<span class="keyword">this</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>O método .indexOf da interface List retorna o indice do objeto passado, mas isso se torna “inviável” sem uma implementação correta do equals e hashCode.<br>Isso é só uma situação, existem diversos “problemas” acarretados pela não implementação desses métodos, quando usamos uma datatable no JSF existe algumas situações em que os objetos se comportam de modo incorreto graças a falta dos métodos sobreescritos.</p>
+<figure><br>    <img src="/images/isso-e-tudo.jpg" alt="Isso é tudo pessoal!"><br>    <figcaption>“Isso é tudo pessoal!”</figcaption><br></figure>
+
+
+<p>Duvidas? gostou? Me acha um idiota?</p>
+<p>Comenta ai!!</p>
+<p>Angeliski</p>
+<p>Referências:</p>
+<p><a href="http://migre.me/hiDcu" title="Ensinando o que é hashCode - Caelum" target="_blank" rel="external">Ensinando o que é hashCode - Caelum</a></p>
+<p><a href="http://migre.me/hiDdS" title="Tabela de Dispersão - Wikipedia" target="_blank" rel="external">Tabela de Dispersão - Wikipedia</a></p>
+<p><a href="http://migre.me/hiDik" title="Tabela de Espalhamento - Caelum" target="_blank" rel="external">Tabela de Espalhamento - Caelum</a> (muito bom!! Recomendadíssimo!)</p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://angeliski.github.io/2014/01/05/equals-hash/" data-id="cilyf1zz500086sbvyfa2qjwc" class="article-share-link"><i class="fa fa-share"></i>Compartilhar</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>seguir:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="https://twitter.com/angeliski_" target="_blank">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="https://www.facebook.com/Angeliskii" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/angeliski" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2014/11/16/conversation-vraptor4/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">novos</strong>
+        <p class="article-nav-title">
+        
+            Utilizando o @ConversationScoped no VRaptor 4
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2013/12/30/certificar-ou-nao/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">antigos</strong>
+        <p class="article-nav-title">Certificar ou não certificar, eis a questão</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recentes</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2014/11/16/conversation-vraptor4/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/abstract-5.jpg)" alt="Utilizando o @ConversationScoped no VRaptor 4" class="thumbnail-image"></span>
+    
+    
+</a>
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/VRaptor/">VRaptor</a></p>
+                            <p class="item-title"><a href="/2014/11/16/conversation-vraptor4/" class="title">Utilizando o @ConversationScoped no VRaptor 4</a></p>
+                            <p class="item-date"><time datetime="2014-11-16T02:00:00.000Z" itemprop="datePublished">16/11/14</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2014/01/05/equals-hash/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/tio.jpg)" alt="equals e hashCode : O que é,porque usar e como implementar" class="thumbnail-image"></span>
+    
+    
+</a>
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Programacao/">Programação</a></p>
+                            <p class="item-title"><a href="/2014/01/05/equals-hash/" class="title">equals e hashCode : O que é,porque usar e como implementar</a></p>
+                            <p class="item-date"><time datetime="2014-01-05T02:00:00.000Z" itemprop="datePublished">05/01/14</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2013/12/30/certificar-ou-nao/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/abstract-4.jpg)" alt="Certificar ou não certificar, eis a questão" class="thumbnail-image"></span>
+    
+    
+</a>
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Opniao/">Opnião</a></p>
+                            <p class="item-title"><a href="/2013/12/30/certificar-ou-nao/" class="title">Certificar ou não certificar, eis a questão</a></p>
+                            <p class="item-date"><time datetime="2013-12-30T02:00:00.000Z" itemprop="datePublished">30/12/13</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2013/05/11/inciando-maven/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/luz-tunel.jpg)" alt="Maven : O que é, porque usar e por onde começar" class="thumbnail-image"></span>
+    
+    
+</a>
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Ferramentas/">Ferramentas</a></p>
+                            <p class="item-title"><a href="/2013/05/11/inciando-maven/" class="title">Maven : O que é, porque usar e por onde começar</a></p>
+                            <p class="item-date"><time datetime="2013-05-11T03:00:00.000Z" itemprop="datePublished">11/05/13</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2012/07/31/trabalhancom-arrays-2/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/abstract-3.jpg)" alt="Trabalhando com Arrays - Finishin..." class="thumbnail-image"></span>
+    
+    
+</a>
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Programacao/">Programação</a></p>
+                            <p class="item-title"><a href="/2012/07/31/trabalhancom-arrays-2/" class="title">Trabalhando com Arrays - Finishin...</a></p>
+                            <p class="item-date"><time datetime="2012-07-31T03:00:00.000Z" itemprop="datePublished">31/07/12</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categorias</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Banco-de-dados/">Banco de dados</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ferramentas/">Ferramentas</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Opniao/">Opnião</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programacao/">Programação</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/VRaptor/">VRaptor</a><span class="category-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">arquivos</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">Novembro 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/01/">Janeiro 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">Dezembro 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">Maio 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/07/">Julho 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/06/">Junho 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/04/">Abril 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/03/">Março 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/01/">Janeiro 2011</a><span class="archive-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQL-Server/">SQL Server</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/apache/">apache</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/arrays/">arrays</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/busca-otimizada/">busca otimizada</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cdi/">cdi</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/certificacao/">certificação</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ciclo-de-vida/">ciclo de vida</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/conexao/">conexão</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/conversation-scoped/">conversation scoped</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/driver/">driver</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/equals/">equals</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/estrutura-de-dados/">estrutura de dados</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gerenciamento/">gerenciamento</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hash/">hash</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javaee/">javaee</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matematica/">matematica</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/maven/">maven</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mercado-de-trabalho/">mercado de trabalho</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ocjp/">ocjp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opniao/">opniao</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/otimizacao/">otimização</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/progamacao/">progamacao</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/programacao/">programação</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/projetos/">projetos</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sql/">sql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tabela-de-dispercao/">tabela de disperção</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tabela-de-espalhamento/">tabela de espalhamento</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tabela-hash/">tabela hash</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tutorial/">tutorial</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vraptor/">vraptor</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vraptor4/">vraptor4</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/SQL-Server/" style="font-size: 10px;">SQL Server</a> <a href="/tags/apache/" style="font-size: 10px;">apache</a> <a href="/tags/arrays/" style="font-size: 13.33px;">arrays</a> <a href="/tags/busca-otimizada/" style="font-size: 10px;">busca otimizada</a> <a href="/tags/cdi/" style="font-size: 10px;">cdi</a> <a href="/tags/certificacao/" style="font-size: 10px;">certificação</a> <a href="/tags/ciclo-de-vida/" style="font-size: 10px;">ciclo de vida</a> <a href="/tags/conexao/" style="font-size: 10px;">conexão</a> <a href="/tags/conversation-scoped/" style="font-size: 10px;">conversation scoped</a> <a href="/tags/driver/" style="font-size: 10px;">driver</a> <a href="/tags/equals/" style="font-size: 10px;">equals</a> <a href="/tags/estrutura-de-dados/" style="font-size: 10px;">estrutura de dados</a> <a href="/tags/gerenciamento/" style="font-size: 10px;">gerenciamento</a> <a href="/tags/hash/" style="font-size: 10px;">hash</a> <a href="/tags/java/" style="font-size: 20px;">java</a> <a href="/tags/javaee/" style="font-size: 10px;">javaee</a> <a href="/tags/matematica/" style="font-size: 16.67px;">matematica</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/mercado-de-trabalho/" style="font-size: 10px;">mercado de trabalho</a> <a href="/tags/ocjp/" style="font-size: 10px;">ocjp</a> <a href="/tags/opniao/" style="font-size: 10px;">opniao</a> <a href="/tags/otimizacao/" style="font-size: 10px;">otimização</a> <a href="/tags/progamacao/" style="font-size: 16.67px;">progamacao</a> <a href="/tags/programacao/" style="font-size: 13.33px;">programação</a> <a href="/tags/projetos/" style="font-size: 10px;">projetos</a> <a href="/tags/sql/" style="font-size: 10px;">sql</a> <a href="/tags/tabela-de-dispercao/" style="font-size: 10px;">tabela de disperção</a> <a href="/tags/tabela-de-espalhamento/" style="font-size: 10px;">tabela de espalhamento</a> <a href="/tags/tabela-hash/" style="font-size: 10px;">tabela hash</a> <a href="/tags/tutorial/" style="font-size: 10px;">tutorial</a> <a href="/tags/vraptor/" style="font-size: 10px;">vraptor</a> <a href="/tags/vraptor4/" style="font-size: 10px;">vraptor4</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2016 Rogerio Angeliski</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'angeliski';
+    
+    
+    var disqus_url = 'http://angeliski.github.io/2014/01/05/equals-hash/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+    
+        <script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+    
+
+    
+        <script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+        <script src="/vendor/scrollLoading/main.js"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
