@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Rogerio Angeliski',
   description: 'Just a developer; Just Keep Swimming;',
-  port: 8086,
+  port: 8085,
   theme: 'theme',
   themeConfig: {
     nav: [
@@ -10,11 +10,11 @@ module.exports = {
         link: '/',
       },
       {
-        text: 'Tags',
+        text: 'Temas',
         link: '/tag/',
       },
       {
-        text: 'About',
+        text: 'Sobre mim',
         link: '/about/',
       },
     ],

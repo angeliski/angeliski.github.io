@@ -21,17 +21,18 @@
                   </div>
                 </section>
             </div>
+            <TerminalPagination v-if="$pagination.length > 1" />
         </section>
     </div>
-    <SimplePagination v-if="$pagination.length > 1 && paginationComponent" />
+    
 </div>
 </template>
 <script>
-  import { SimplePagination } from '@vuepress/plugin-blog/lib/client/components'
+  import TerminalPagination from '@theme/components/TerminalPagination.vue'
 
   export default {
     components: {
-      SimplePagination
+      TerminalPagination
     },
     computed: {
       pages() {

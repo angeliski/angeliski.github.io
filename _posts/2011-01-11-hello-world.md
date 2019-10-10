@@ -1,9 +1,6 @@
 ---
 title: Hello World
 summary: "O primeiro post do blog"
-image: https://images.unsplash.com/photo-1570658866855-358a84fea0ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80
-author: Angeliski
-location: São Paulo
 date: 2011-01-11
 ---
 
@@ -15,10 +12,6 @@ Inicialmente, por questões de tempo e de habito, vou postar alguns links Intere
 
 [Java Sem Café](http://javasemcafe.blogspot.com/)
 
-Atualização: {{ page.updated }} 
-
- Estou migrando o blog de plataforma e atualmente estou muito interessado em Javascript e no mundo front end. E mais importante de tudo, terminei a faculdade. o//
-
-
+Estou migrando o blog de plataforma e atualmente estou muito interessado em Javascript e no mundo front end. E mais importante de tudo, terminei a faculdade. o//
 
 Angeliski

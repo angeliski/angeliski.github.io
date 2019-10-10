@@ -1,6 +1,6 @@
 <template>
   <div>
-    <BaseListLayout v-if="$pagination"/>
+    <CustomListLayout v-if="$pagination"/>
     <Content v-else/>
   </div>
 </template>
