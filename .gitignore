@@ -11,7 +11,7 @@ node_modules/
 /tests/e2e/screenshots/
 /tests/unit/coverage/
 jsconfig.json
-.vuepress/dist
+.vuepress/dist/
 
 # Local Env Files
 .env.local
