@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   title: 'Rogerio Angeliski',
   description: 'Just a developer; Just Keep Swimming;',
@@ -34,5 +36,15 @@ module.exports = {
         },
       ]
   },
-}
+},
+markdown: {
+  lineNumbers: true
+},
+configureWebpack: {
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, '../')
+    }
+  }
+},
 }
