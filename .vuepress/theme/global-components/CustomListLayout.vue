@@ -164,4 +164,11 @@ https://github.com/elijahmanor/spectacle-terminal
             color: #656464
             :after
              content: "(Visitado)"
+
+// Override global component
+.ui-post 
+    padding-bottom: 5px
+    margin-bottom: 5px
+    border-bottom: 0
+
 </style>
