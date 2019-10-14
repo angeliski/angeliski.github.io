@@ -1,9 +1,21 @@
 <template>
   <div class="pagination terminal-pagination">
-    <router-link v-if="$pagination.hasPrev" :to="$pagination.prevLink">:Voltar</router-link>
-    <router-link v-if="$pagination.hasNext" :to="$pagination.nextLink">:Avançar</router-link>
+    <router-link :disabled="$pagination.hasPrev" :class="{ disabled: !$pagination.hasPrev}" :to="prevLink">:Voltar</router-link>
+    <router-link :disabled="$pagination.hasNext" :class="{ disabled: !$pagination.hasNext}" :to="nextLink">:Avançar</router-link>
   </div>
 </template>
+<script>
+export default {
+  computed: {
+    prevLink() {
+      return this.$pagination.hasPrev ? this.$pagination.prevLink :'#';
+    },
+    nextLink() {
+      return this.$pagination.hasNext ? this.$pagination.nextLink :'#';
+    }
+  }
+}
+</script> 
 
 <style lang="stylus">
   .terminal-pagination
@@ -22,4 +34,6 @@
       transition all .5s
       &:hover
         color #FFF
+    .disabled
+      text-decoration line-through
 </style>
