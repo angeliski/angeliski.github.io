@@ -1,4 +1,4 @@
 <template>
     <CustomListLayout v-if="$pagination"/>
-    <Content v-else/>
+    <Content class="page" v-else/>
 </template>
