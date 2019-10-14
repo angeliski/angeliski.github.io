@@ -46,10 +46,20 @@
 /* Base do código
 https://github.com/elijahmanor/spectacle-terminal 
 */
+.flex-grid
+  display flex
+  justify-content center
+  align-items center
+  height: calc(100vh - 140px);
+
 
 .terminal 
   display: flex
   flex-direction: column
+  flex 1
+  max-width 50%
+  @media (max-width: $MQMobile)
+    max-width 90%
 
 .terminal-header 
   position: relative
