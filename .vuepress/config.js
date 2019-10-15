@@ -6,6 +6,19 @@ module.exports = {
   port: 8085,
   theme: 'theme',
   themeConfig: {
+    modifyBlogPluginOptions(blogPluginOptions){
+      const comment = {
+        service: 'disqus',
+        shortname: 'angeliski-1',
+        // service: 'vssue',
+        // owner: 'You',
+        // repo: 'Your repo',
+        // clientId: 'Your clientId',
+        // clientSecret: 'Your clientSecret',
+      }
+
+      return { ...blogPluginOptions, comment }
+    },
     nav: [
       {
         text: 'Home',

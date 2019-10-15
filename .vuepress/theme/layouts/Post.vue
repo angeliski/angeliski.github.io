@@ -1,17 +1,24 @@
 <template>
   <div id="vuperess-theme-blog__post-layout">
-      <img :src="cover" v-if="$page.frontmatter.cover" class="vuepress-post-cover">
-    <Content class="vuepress-blog-theme-content"/>
+    <img :src="cover" v-if="$page.frontmatter.cover" class="vuepress-post-cover">
+    <div class="vuepress-blog-theme-content">
+      <h1 v-if="$page.frontmatter.title">{{$page.frontmatter.title}}</h1>  
+      <Content/>
+      <hr/>
+      <Comment/>
+    </div>
     <Toc/>
   </div>
 </template>
 
 <script>
-  import Toc from '@theme/components/Toc.vue'
-  
+import Toc from '@theme/components/Toc.vue'
+import { Comment } from '@vuepress/plugin-blog/lib/client/components'
+
   export default {
     components: {
       Toc,
+      Comment,
     },
     computed: {
         cover() {
