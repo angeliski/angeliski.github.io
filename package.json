@@ -22,5 +22,8 @@
     "@vuepress/plugin-blog": "^1.3.0",
     "@vuepress/theme-blog": "^1.2.5",
     "vuepress": "^1.1.0"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-medium-zoom": "^1.0.0-rc.1"
   }
 }
