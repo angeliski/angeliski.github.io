@@ -127,6 +127,8 @@ https://github.com/elijahmanor/spectacle-terminal
   height: 100%
   max-height: 400px
   overflow: auto
+  @media (max-width: $MQMobile)
+      line-height: 1.3
     
 .article-share-box
     display: flex

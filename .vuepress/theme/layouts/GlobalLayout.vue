@@ -43,6 +43,6 @@
     margin 0 auto
   @media (max-width: $MQMobile)
     .content-wrapper
-      padding 100px 0 20px 0
+      padding 50px 0 20px 0
       min-height calc(100vh - 20px - 60px - 100px)
 </style>
