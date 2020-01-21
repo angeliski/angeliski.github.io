@@ -3,7 +3,8 @@ title: "Maven : O que é, porque usar e por onde começar"
 date: "2013-05-11"
 ---
 
-[![A Luz no Fim do Tunel](http://algoritmosdescomplicados.files.wordpress.com/2013/05/bloggif_518e4f819fcc5.jpeg?w=300)](http://algoritmosdescomplicados.files.wordpress.com/2013/05/bloggif_518e4f819fcc5.jpeg)
+
+<ImagePoster caption="A Luz no Fim do Tunel" :src="require('@/assets/img/sunrise.jpg')" :width="560" />
 
 Imagine que seu chefe passou um projeto pra você, sua grande chance! Começam as configurações, as bibliotecas utilizadas são definidas e a busca pela internet começa. Dois dias de procura, muitos forums visitados  exaustivamente, mas você conseguiu achar todas as libs! Vitória!! Mas será que era necessário todo esse trabalho? Imagine se houvesse um jeito de buscar "MAGICAMENTE" todas as libs que você.. oh GOD! Isso chama [MAVEN](http://migre.me/w9Bs9 "Maven")!!
 

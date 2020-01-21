@@ -60,7 +60,7 @@ Uma coisa muito importante que não deve ser esquecida é  adicionar o driver a
 
 <ImagePoster caption="TCP/IP? Não! Era pra funcionar!" :src="require('@/assets/img/sql-server/11.jpg')" :width="590" />
 
-"Angeliski, no seu pode até funcionado, mas aqui necas." 
+"Angeliski, no seu pode até funcionado, mas aqui necas."
 
 Eu sei, frustante. Mas vamos lá, você vai procurar no iniciar, na pasta do Sql uma ferramenta chamada "SQL Server Configuration Manager" .
 
