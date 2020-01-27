@@ -36,7 +36,7 @@
     },
     computed: {
       pages() {
-        return this.$pagination.pages
+        return this.$pagination.pages.filter( page => !page.frontmatter.hide_main_page)
       },
     },
   }
