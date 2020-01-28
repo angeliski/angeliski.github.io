@@ -16,23 +16,52 @@ Representar uma view como entidade do **Hibernate** não é nada complexo, você
 
 Só que quando você recuperar registros dessa view e houver duas linhas com o mesmo valor, só uma delas será retornarda. Confuso? Vamos ver um exemplo.
 
-Imagine que nossa aplicação tem duas tabelas, uma de pessoas e outra de endereços. Além disso, temos uma view que nos retorna a pessoa e seu endereço completo. Nossa tabela de pessoa tem um _**Bruce Wayne**_ cadastro com dois endereços e um _**Berry Allen**_ com só um endereço. Vamos ver como fica nosso código. \`\`\` public class Pessoa {
+Imagine que nossa aplicação tem duas tabelas, uma de pessoas e outra de endereços. Além disso, temos uma view que nos retorna a pessoa e seu endereço completo. Nossa tabela de pessoa tem um _**Bruce Wayne**_ cadastro com dois endereços e um _**Berry Allen**_ com só um endereço. Vamos ver como fica nosso código.
 
-@Id private Long id; private String nome; private Integer idade;
+```java
+@Entity
+public class Pessoa {
 
-@OneToMany(mappedBy = "pessoa") private List&amp;lt;Endereco&amp;gt; enderecos; //getters e setters }\`\`\` \`\`\` public class Endereco {
+    @Id
+    private Long id;
+    private String nome;
+    private Integer idade;
 
-@Id private Long id; private String logradouro; private String bairro; private String cep; @ManyToOne @JoinColumn(name = "pessoa\_id") private Pessoa pessoa;
+    @OneToMany(mappedBy = "pessoa")
+    private List<Endereco> enderecos;
+    //getter e setters
+}
 
-//getters e setters } \`\`\` \`\`\` public class PessoaComEndereco {
+@Entity
+public class Endereco {
 
-@Id private Long pessoaId; private Long enderecoId; private String nome; private String enderecoCompleto; //getters e setters } \`\`\`  
+    @Id
+    private Long id;
+    private String logradouro;
+    private String bairro;
+    private String cep;
+    @ManyToOne
+    @JoinColumn(name = "pessoa_id")
+    private Pessoa pessoa;
+}
+
+@Entity
+public class PessoaComEndereco {
+
+    @Id
+    private Long pessoaId;
+    private Long enderecoId;
+    private String nome;
+    private String enderecoCompleto;
+
+}
+```
 
 Como você pode ver,  a view teve seu id anotado no id da pessoa, acontece que quando tentarmos recuperar os dados de Bruce dentro da aplicação através da nossa view, vamos ter um problema. Veja só:
 
 ![erro-intellij-enderec%cc%a7o-duplicado](https://algoritmosdescomplicados.files.wordpress.com/2017/02/erro-intellij-endereccca7o-duplicado.png)
 
-Se você executar o teste **carregarEnderecosEsperandoDuplicidade **presente na classe **ViewHibernateSpringDataApplicationTests **vai obter o mesmo resultado: O mesmo endereço é carregado duas vezes.
+Se você executar o teste **carregarEnderecosEsperandoDuplicidade** presente na classe **ViewHibernateSpringDataApplicationTests** vai obter o mesmo resultado: O mesmo endereço é carregado duas vezes.
 
 _"Mas Angeliski, como isso é possível? Eu verifiquei o banco e o select, tá tudo certo?"_
 
@@ -42,9 +71,19 @@ O problema está claramente no _**@Id**_ que  especificamos na view. Vamos pens
 
 ## 1º Solução - EmbeddedId
 
-Quando falamos do _**@Id**_ você pode logo pensar em resolver isso gerando um Id composto para a view. Então vamos criar uma classe para testar esse cenário: \`\`\` @Table(name = "PESSOA\_COM\_ENDERECO") public class PessoaComEnderecoIdEmbeddable {
+Quando falamos do _**@Id**_ você pode logo pensar em resolver isso gerando um Id composto para a view. Então vamos criar uma classe para testar esse cenário: 
 
-@EmbeddedId private PessoaEnderecoId pessoaEnderecoId; private String nome; private String enderecoCompleto; //getters e setters } \`\`\`  
+```java
+@Entity
+@Table(name = "PESSOA_COM_ENDERECO")
+public class PessoaComEnderecoIdEmbeddable {
+
+    @EmbeddedId
+    private PessoaEnderecoId pessoaEnderecoId;
+    private String nome;
+    private String enderecoCompleto;
+}
+```
 
 Agora sim, nosso resultado está correto quando realizamos a busca:
 
@@ -58,11 +97,37 @@ _"Angeliski, se o EmbeddedId não pode resolver sempre, como faz?"_
 
 É isso ai. Nós, programadores, vamos providenciar um identificador para essa view.
 
-Primeiro vamos ver nossa classe, que representa isso: \`\`\` @Table(name = "PESSOA\_COM\_ENDERECO") public class PessoaComEnderecoIdGerado {
+Primeiro vamos ver nossa classe, que representa isso: 
 
-@Id private String id; private Long pessoaId; private Long enderecoId; private String nome; private String enderecoCompleto; //getters e setters } \`\`\`  
+```java
+@Entity
+@Table(name = "PESSOA_COM_ENDERECO")
+public class PessoaComEnderecoIdGerado {
 
-Se você notar, nós acrescentamos o campo Id nesse caso, para anotar ele como o @Id dessa view. Mas como vamos gerar um identificador no banco? Dê uma olhada na nossa declaração da view: \`\`\` SELECT UUID() AS ID, p.id pessoa\_id, e.id endereco\_id, p.nome, concat(e.logradouro, ', ', e.bairro, ' - CEP:', e.cep) endereco\_completo FROM pessoa p INNER JOIN endereco e ON p.id = e.pessoa\_id; \`\`\`  
+    @Id
+    private String id;
+    private Long pessoaId;
+    private Long enderecoId;
+    private String nome;
+    private String enderecoCompleto;
+}
+```
+
+Se você notar, nós acrescentamos o campo Id nesse caso, para anotar ele como o @Id dessa view. Mas como vamos gerar um identificador no banco? Dê uma olhada na nossa declaração da view: 
+```sql
+CREATE OR replace VIEW pessoa_com_endereco 
+AS 
+  SELECT Uuid()                                                 AS ID, 
+         p.id                                                   pessoa_id, 
+         e.id                                                   endereco_id, 
+         p.nome, 
+         Concat(e.logradouro, ', ', e.bairro, ' - CEP:', e.cep) 
+         endereco_completo 
+  FROM   pessoa p 
+         inner join endereco e 
+                 ON p.id = e.pessoa_id; 
+```
+
 
 Se você observar, o primeiro item do select é o id, usando a função [UUID()](https://dev.mysql.com/doc/refman/5.7/en/miscellaneous-functions.html#function_uuid) (para o Mysql!).
 

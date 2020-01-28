@@ -16,7 +16,18 @@ Antes de começar vamos falar sobre o projeto que eu vou usar de exemplo. É o p
 
 ## A parte fácil
 
-Claro, tem uma parte que foi fácil. Configurar o Travis CI para fazer o build, foi relativamente simples. É só criar um arquivo **.travis.yml **na raiz com o seguinte conteudo: \`\`\` node\_js: - "6.11.0" script: mocha --timeout 10000 --reporter nyan before\_script: - npm install after\_success: - npm run coveralls \`\`\`  
+Claro, tem uma parte que foi fácil. Configurar o Travis CI para fazer o build, foi relativamente simples. É só criar um arquivo **.travis.yml **na raiz com o seguinte conteudo: 
+```yml
+language: node_js
+node_js:
+- "6.11.0"
+script: mocha --timeout 10000 --reporter nyan
+before_script:
+- npm install
+after_success:
+- npm run coveralls
+```
+
 
 Além disso, basta ativar o seu projeto no Travis. Isso já te garante 50% do caminho.
 
@@ -26,7 +37,19 @@ Dai, você decide publicar seu projeto no [Now](https://zeit.co/now). É fácil,
 
 \[caption id="attachment\_1629" align="aligncenter" width="360"\]![Pesquisa now](https://algoritmosdescomplicados.files.wordpress.com/2017/07/giphy16.gif) Evolução da pesquisa\[/caption\]
 
-Depois de muito tempo procurando como fazer isso, eu descobri que você pode [gerar um token no now](https://zeit.co/account/tokens) e usar isso para fazer o deploy. Com esse token configurado como uma variável de ambiente no Travis (não vai me comitar ele!) você pode atualizar seu arquivo **.travis.yml** para: \`\`\` node\_js: - "6.11.0" script: mocha --timeout 10000 --reporter nyan before\_script: - npm install after\_success: - npm run coveralls - now -t $TOKEN\_NOW --public \`\`\`  
+Depois de muito tempo procurando como fazer isso, eu descobri que você pode [gerar um token no now](https://zeit.co/account/tokens) e usar isso para fazer o deploy. Com esse token configurado como uma variável de ambiente no Travis (não vai me comitar ele!) você pode atualizar seu arquivo **.travis.yml** para: 
+
+```yml
+language: node_js
+node_js:
+- "6.11.0"
+script: mocha --timeout 10000 --reporter nyan
+before_script:
+- npm install
+after_success:
+- npm run coveralls
+- now -t $TOKEN_NOW --public
+```
 
 Dai é só comitar e corre pro push!
 
@@ -38,14 +61,26 @@ Se você conhece o Now, sabe que é possível criar um alias para o seu site, se
 
 ![Medo](https://algoritmosdescomplicados.files.wordpress.com/2017/07/giphy17.gif)Calma jovem, vou te dizer que é simples agora que eu aprendi essa budega.
 
-Mude seu arquivo **.travis.yml** para isso aqui: \`\`\` node\_js: - "6.11.0" script: mocha --timeout 10000 --reporter nyan before\_script: - npm install after\_success: - npm run coveralls - now -t $TOKEN\_NOW --public - now -t $TOKEN\_NOW --public alias\`\`\`  
+Mude seu arquivo **.travis.yml** para isso aqui:
+```
+language: node_js
+node_js:
+- "6.11.0"
+script: mocha --timeout 10000 --reporter nyan
+before_script:
+- npm install
+after_success:
+- npm run coveralls
+- now -t $TOKEN_NOW --public
+- now -t $TOKEN_NOW --public alias
+```
 
 E o seu package.json agora tem que ter as propriedades que vão dizer qual é o alias:
-
-  \`\`\` "alias": "seuprojeto" }
-
-\`\`\`  
-
+```json
+"now": {
+   "alias": "seuprojeto"
+}
+```
 Pronto, isso garante que quando seu deploy for feito, vai criar um alias 100% funcional.
 
 ## Mas e se eu quiser só a Master?
@@ -56,7 +91,22 @@ Claro, chegou aquela hora que você fala: "Show! Eu quero tudo isso, mas eu só 
 
 Sem panico, é mais simples do que o anterior agora que eu gastei um mês pra descobrir isso.
 
-O seu arquivo  **.travis.yml** vai ficar assim: \`\`\` node\_js: - "6.11.0" script: mocha --timeout 10000 --reporter nyan before\_script: - npm install after\_success: - npm run coveralls - test $TRAVIS\_BRANCH = "master" && test $TRAVIS\_PULL\_REQUEST = "false" && now -t $TOKEN\_NOW --public - test $TRAVIS\_BRANCH = "master" && test $TRAVIS\_PULL\_REQUEST = "false" && now -t $TOKEN\_NOW --public alias \`\`\`  
+O seu arquivo  **.travis.yml** vai ficar assim:
+
+```yml
+language: node_js
+node_js:
+- "6.11.0"
+script: mocha --timeout 10000 --reporter nyan
+before_script:
+- npm install
+after_success:
+- npm run coveralls
+- test $TRAVIS_BRANCH = "master" && test $TRAVIS_PULL_REQUEST = "false" &&
+now -t $TOKEN_NOW --public
+- test $TRAVIS_BRANCH = "master" && test $TRAVIS_PULL_REQUEST = "false" &&
+now -t $TOKEN_NOW --public alias
+```
 
 Feito!
 

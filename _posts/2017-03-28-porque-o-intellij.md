@@ -42,15 +42,17 @@ Quando eu entrei na [Bluesoft](https://bluesoft.com.br/), 90% dos desenvolvedore
 
 Conforme eu ia pareando com os desenvolvedores, eles iam me mostrando como o Intellij funcionava. Atalhos, vantagens, configurações e isso foi se mostrando vantajoso. Vou dar alguns exemplos:
 
-- **Decompiler - **O Intellij tem um decompilador fantástico, que permite você inclusive debugar o código externo que não tem fonte.
-- **Database tools - **Ele tem uma visão que permite você conectar no banco, gerar consultas, editar registros inline e inclusive copiar uma linha gerando um insert, update ou até mesmo no formato CSV.
+- **Decompiler** - O Intellij tem um decompilador fantástico, que permite você inclusive debugar o código externo que não tem fonte.
+- **Database tools** - Ele tem uma visão que permite você conectar no banco, gerar consultas, editar registros inline e inclusive copiar uma linha gerando um insert, update ou até mesmo no formato CSV.
     
-- **Quick Search - **Outra coisa é a pesquisa que permite que você visualize um preview dos resultados, permitindo que você interaja com as classes, editando ou navegando nelas.
-- **Autocomplete -** Você consegue usar no JS, no Java, no Groovy, Clojure, Angular.... E milhões de outras coisas.
-- **Search Pattern - **Você consegue pesquisar por trechos e até mesmo por regex, tudo de modo simples e interativo
+- **Quick Search** - Outra coisa é a pesquisa que permite que você visualize um preview dos resultados, permitindo que você interaja com as classes, editando ou navegando nelas.
+- **Autocomplete** - Você consegue usar no JS, no Java, no Groovy, Clojure, Angular.... E milhões de outras coisas.
+- **Search Pattern** - Você consegue pesquisar por trechos e até mesmo por regex, tudo de modo simples e interativo
 
 Claro que isso são só algumas coisas. Conforme você vai usando, vai descobrindo outras coisas vantajosas pra você.
 
 Duvidas? gostou? Me acha um idiota?
 
-Comenta ai!! Angeliski
+Comenta ai!! 
+
+Angeliski

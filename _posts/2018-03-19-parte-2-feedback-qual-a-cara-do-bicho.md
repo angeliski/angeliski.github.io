@@ -11,7 +11,7 @@ Bora lá?
 
 Se você quiser acompanhar a série, pode ver os links aqui:
 
-- [\[Parte 1\] Feedback! Que bicho é esse?](https://angeliski.com.br/2018/03/05/parte-1-feedback-que-bicho-e-esse/#more-1792)
+- [\[Parte 1\] Feedback! Que bicho é esse?](/2018/03/05/parte-1-feedback-que-bicho-e-esse/#more-1792)
 - \[Parte 2\] Feedback! Qual a cara do bicho?
 - \[Parte 3\] Feedback! Como domar esse bicho?
 - \[Parte 4\] Feedback! Gatilhos de verdade – a dificuldade de ver

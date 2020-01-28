@@ -22,7 +22,7 @@ O mano arregaçou.
 
 Se você quiser, pode ver os [slides aqui](https://speakerdeck.com/raphaelfabeni/css-tips).
 
-A palestra dele trouxe vários insigths sobre as coisas que nós já fazemos no dia a dia, dicas de como centralizar um elemento (sem apelar pra flatbox!), não usar o tão conhecido clear-fix (Quem nunca?) e até mesmo detalhes que podemos ter com nossos efeitos em css. Depois de dar vária dicas (vale a pena dar uma olhada nos slides, de verdade), ele ainda teve tempo pra fazer o logo do front in sampa. Na mão. Ao vivo. No olho.
+A palestra dele trouxe vários insigths sobre as coisas que nós já fazemos no dia a dia, dicas de como centralizar um elemento (sem apelar pra flexbox!), não usar o tão conhecido clear-fix (Quem nunca?) e até mesmo detalhes que podemos ter com nossos efeitos em css. Depois de dar vária dicas (vale a pena dar uma olhada nos slides, de verdade), ele ainda teve tempo pra fazer o logo do front in sampa. Na mão. Ao vivo. No olho.
 
 \[caption id="attachment\_1429" align="aligncenter" width="500"\]![giphy3](https://algoritmosdescomplicados.files.wordpress.com/2017/07/giphy3.gif) Olha isso...\[/caption\]
 

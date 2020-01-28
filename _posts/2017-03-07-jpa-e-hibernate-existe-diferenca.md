@@ -32,7 +32,7 @@ Detalhes da implementação que geram custos são conhecidos como [vendor lock-i
 
 ## Primeiro veio o Hibernate, e os programadores viram que era da hora
 
-Antes de alguém se interessar por criar um padrão qualquer que seja, é preciso que aquela tecnologia seja aceita. O Hibernate surgiu por volta de 2003 junto do conceito de ORM, trazendo uma nova abordagem para a interação de aplicações com os banco de dados em SQL. Não era mais precisar escrever um **INSERT** ou **UPDATE** na hora de interagir com os dados. Claro que como toda coisa boa, surgiram outros frameworks de ORM como o TopLink e o Eclipselink, mas o que fez sucesso realemente foi o **Hibernate. **
+Antes de alguém se interessar por criar um padrão qualquer que seja, é preciso que aquela tecnologia seja aceita. O Hibernate surgiu por volta de 2003 junto do conceito de ORM, trazendo uma nova abordagem para a interação de aplicações com os banco de dados em SQL. Não era mais precisar escrever um **INSERT** ou **UPDATE** na hora de interagir com os dados. Claro que como toda coisa boa, surgiram outros frameworks de ORM como o TopLink e o Eclipselink, mas o que fez sucesso realemente foi o **Hibernate.**
 
 Eu não sei dizer porque ele ficou tão famoso (talvez tenha sido o primeiro?), mas se você souber pode deixar um comentário que eu adiciono aqui!
 
@@ -40,7 +40,7 @@ O ponto é: com o surgimento de diversos frameworks era preciso começar a organ
 
 ## Fazendo um puxadinho na JSR 220
 
-A [JSR 220](https://jcp.org/en/jsr/detail?id=220) é a JCP que fala sobre os **Enterprise JavaBeans 3.0**. Acontece que lá no meio desse amontoado de informações tem também os tópicos sobre a **Java Persistence API** (**JPA**). Isso mesmo, o JPA é definido inicialmente junto com os **EJBs **devido a uma série de detalhes relacionados a transações. Eles começaram a definir quais mecanismos seriam responsabilidade do JPA e quais seriam as interfaces comuns. Em 2009 surge a [JSR 317](https://jcp.org/en/jsr/detail?id=317) tratando da versão do JPA 2.0 trazendo novidades interessantes para a especificação.
+A [JSR 220](https://jcp.org/en/jsr/detail?id=220) é a JCP que fala sobre os **Enterprise JavaBeans 3.0**. Acontece que lá no meio desse amontoado de informações tem também os tópicos sobre a **Java Persistence API** (**JPA**). Isso mesmo, o JPA é definido inicialmente junto com os **EJBs** devido a uma série de detalhes relacionados a transações. Eles começaram a definir quais mecanismos seriam responsabilidade do JPA e quais seriam as interfaces comuns. Em 2009 surge a [JSR 317](https://jcp.org/en/jsr/detail?id=317) tratando da versão do JPA 2.0 trazendo novidades interessantes para a especificação.
 
 _"Legal, mas qual a diferença?"_
 
@@ -54,4 +54,6 @@ O JPA não é a bala de prata. Em algumas situações pode ser vantajoso usar cl
 
 Duvidas? gostou? Me acha um idiota?
 
-Comenta ai!! Angeliski
+Comenta ai!! 
+
+Angeliski
