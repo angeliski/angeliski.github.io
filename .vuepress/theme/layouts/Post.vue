@@ -7,17 +7,14 @@
       <hr/>
       <Comment/>
     </div>
-    <Toc/>
   </div>
 </template>
 
 <script>
-import Toc from '@theme/components/Toc.vue'
 import { Comment } from '@vuepress/plugin-blog/lib/client/components'
 
   export default {
     components: {
-      Toc,
       Comment,
     },
     computed: {
@@ -35,6 +32,10 @@ import { Comment } from '@vuepress/plugin-blog/lib/client/components'
     font-family PT Serif, Serif
     color #2c3e50
     position relative
+    max-width: 70%
+    padding: 2rem;
+    margin: auto;
+    
     @media(min-width: $MQNarrow)
       box-shadow: 0 10px 20px rgba(0,0,0,0.05), 0 6px 6px rgba(0,0,0,0.07)
 
