@@ -12,15 +12,15 @@ A primeira mentira que a gente sempre conta é a da alteração pequena.
 
 _"Poxa vida Angeliski,eu só tirei aquele if que estava errado"_
 
-O ponto é exatamente esse. Você realiza uma alteração no código normalmente por dois motivos: ou porque tinha um bug, ou porque a regra de negócio mudou. Qualquer que seja o caso, quando você deixa de fazer o teste cria um brecha para falha não rastreada. O que garante que seu if vai continuar funcionando quando o _**Fulano do lado **_ fizer uma alteração?
+O ponto é exatamente esse. Você realiza uma alteração no código normalmente por dois motivos: ou porque tinha um bug, ou porque a regra de negócio mudou. Qualquer que seja o caso, quando você deixa de fazer o teste cria um brecha para falha não rastreada. O que garante que seu if vai continuar funcionando quando o _**Fulano do lado**_ fizer uma alteração?
 
-**Seu teste! **Não importa o quão pequena seja a alteração que você fez, faça um teste que garanta que o que você mudou está e vai continuar funcionando.
+**Seu teste!** Não importa o quão pequena seja a alteração que você fez, faça um teste que garanta que o que você mudou está e vai continuar funcionando.
 
 ## A funcionalidade que eu fiz é pequena, não precisa disso
 
 _"Mas o meu botão só faz **X**"_
 
-Você gastou uma hora fazendo uma funcionalidade, apenas um botão que faz **X** (Insira aqui a sua funcionalidade).Você quer garantir que o _**Fulano do lado (**esse cara é terrivel né?)_ não quebre tudo? Se você fez o teste pode ir pra casa tranquilo, mas se não fez... Não importa o quão pequena uma funcionalidade (ou a correção de um bug) é a unica maneira que você garante o funcionamento dela é fazendo o teste. Se não houvesse a necessidade dela estar sempre funcionando, não teria porque desenvolver ela também.
+Você gastou uma hora fazendo uma funcionalidade, apenas um botão que faz **X** (Insira aqui a sua funcionalidade).Você quer garantir que o _**Fulano do lado**(esse cara é terrivel né?)_ não quebre tudo? Se você fez o teste pode ir pra casa tranquilo, mas se não fez... Não importa o quão pequena uma funcionalidade (ou a correção de um bug) é a unica maneira que você garante o funcionamento dela é fazendo o teste. Se não houvesse a necessidade dela estar sempre funcionando, não teria porque desenvolver ela também.
 
 ## Depois eu faço esse teste
 
@@ -44,7 +44,7 @@ Não é por estar a dez anos em produção que ele não precisa ser testado. Doi
 
 _"Agora eu vou testar o código do **Fulano do lado**?"_
 
-Time. Equipe. Conjunto. Você pode chamar do que quiser, mas não muda o fato de que vocês todos estão com um mesmo propósito: tomar café construir software de qualidade. Não é porque o cara esqueceu do teste (ou não quis fazer) que você vai deixar a oportunidade de cubrir essa brecha passar. Não importa quem fez o furo no casco do navio, se você não tapar, todo mundo vai se afogar.
+Time. Equipe. Conjunto. Você pode chamar do que quiser, mas não muda o fato de que vocês todos estão com um mesmo propósito: <strike>tomar café</strike> construir software de qualidade. Não é porque o cara esqueceu do teste (ou não quis fazer) que você vai deixar a oportunidade de cubrir essa brecha passar. Não importa quem fez o furo no casco do navio, se você não tapar, todo mundo vai se afogar.
 
 * * *
 
