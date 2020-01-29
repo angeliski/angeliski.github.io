@@ -1,7 +1,6 @@
 ---
 title: "Git e a dificuldade em renomear um arquivo"
 date: "2016-11-29"
-coverImage: "atlassian-getting-git-right.jpg"
 ---
 
 Quem trabalha com Git ou usa ele em casa, provavelmente já teve esse problema.
@@ -32,8 +31,5 @@ A primeira vez que eu me deparei com esse problema eu resolvi da maneira mais po
 git config --global core.ignorecase false
 ```
 
-Duvidas? gostou? Me acha um idiota?
 
-Comenta ai!!
-
-Angeliski
+<Signature />

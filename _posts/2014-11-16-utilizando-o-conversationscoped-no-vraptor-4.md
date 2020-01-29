@@ -91,8 +91,16 @@ public class HomeController implements Serializable {
 
 A primeira distinção desse Controller é a anotação _@ConversationScoped_ na classe. Isso indica para o CDI qual vai ser o escopo, mas cuidado: só isso não é suficiente para que a sua classe tenha um escopo maior que o escopo request. Para que o escopo se torne persistente, não perdendo os dados a cada requisição, é necessário injetar um objeto _Conversation_ e chamar seu método _begin_. Isso pode ser observado aqui:
 
-\`\`\` @Get public void game() { if (conversation.isTransient()) { conversation.begin(); } result.include("cid", conversation.getId()); gerarPergunta(); } \`\`\`
-
+```java
+	@Get
+	public void game() {
+		if (conversation.isTransient()) {
+			conversation.begin();
+		}
+		result.include("cid", conversation.getId());
+		gerarPergunta();
+	}
+```
 Nesse método a conversação é iniciada. O _Conversation_ tem um estado padrão conhecido como \*transient\*. Quando o método _begin_ é acionado ele passa para o \*long-running\* mantendo os dados até que seja invocado o método _end_ do _Conversation_. Só que um detalhe importante deve ser observado. O CDI não tem como saber a qual objeto você está tratando. O único modo dele saber isso é você informando qual o identificador daquela conversação e isso é feito através do pârametro \*\*cid\*\*. É necessário informar na url esse pârametro para que o CDI consiga recuperar o objeto correto. Observe que o pârametro cid é incluido no result para que seja possível utilizar ele na pagina. O nome utilizado para incluir o \*id\* do _Conversation_ no result não é fundamental. Ele poderia ser qualquer um, desde que fosse recuperado corretamente na pagina. Só é fundamental utilizar o pârametro \*\*cid\*\* quando a requisição for enviada para o servidor. Observe como ficou a nossa pagina que vai utilizar esse parâmetro.
 
 ```html
@@ -134,8 +142,5 @@ Por fim temos o método que encerra o *long-running* através do método _end_:
 
 Aqui é valido observar que caso você não encerre uma conversação, ela não vai se manter em memória por muito mais que dois minutos, que é o tempo padrão. Isso garante que diferente do _@SessionScoped_ os recursos vão ser liberados antes, caso a aplicação não encerre o estado daquele objeto. O timeout pode ser ajustado através do método _setTimeout_ conforme a necessidade, mas normalmente não é preciso.
 
-Duvidas? gostou? Me acha um idiota?
 
-Comenta ai!!
-
-Angeliski
+<Signature />

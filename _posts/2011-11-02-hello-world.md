@@ -12,7 +12,4 @@ Inicialmente, por questões de tempo e de habito, vou postar alguns links Intere
 [Java Sem Café](http://javasemcafe.blogspot.com/ "Java Sem Café - andii.brunetta")
 
  
-
- 
-
-Angeliski
+<Signature />

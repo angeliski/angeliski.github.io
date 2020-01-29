@@ -1,12 +1,12 @@
 ---
 title: "Não faça o que o cliente pede"
 date: "2017-07-01"
-coverImage: "projeto.jpg"
+cover: project_fail.jpg
 ---
 
 Uma das coisas mais interessantes do desenvolvimento de software é a entrega. Você não precisa ser um desenvolvedor, porque não tem nada igual a ver as coisas funcionando, ver o olho do cliente brilhando com o problema dele resolvido:
 
-\[caption id="attachment\_1295" align="aligncenter" width="480"\]![really?](https://algoritmosdescomplicados.files.wordpress.com/2017/06/really.gif) O que é isso?\[/caption\]
+<ImagePoster caption="Sério?" :src="require('@/assets/img/really.gif')" />
 
 O problema é quando você entrega algo que o cliente pediu, que não tem nada a ver com aquilo que ele quer de verdade!
 
@@ -56,18 +56,14 @@ Voltando ao nosso exemplo, vamos ver com o nosso cliente se ele gosta da ideia d
 
 "Olha Goku, eu posso colocar a coluna de status. Mas não seria melhor se eu colocasse um filtro para você conseguir listas só os clientes inativos? Isso pode trazer mais agilidade para o seu time, já que eles não precisam procurar na lista os inativos"
 
-\[caption id="attachment\_1370" align="aligncenter" width="500"\]![Maybe](https://algoritmosdescomplicados.files.wordpress.com/2017/07/giphy.gif) Parece bom...\[/caption\]
+<ImagePoster caption="Parece bom..." :src="require('@/assets/img/lgtm.gif')" />
 
 Isso mesmo jovem, ele gostou. Agora sim, estamos 100% no caminho certo.
 
 Um tempo depois (não muito, esperamos), você entrega aquele filtro sensacional, e consegue ver o cliente usando:
 
-\[caption id="attachment\_1378" align="aligncenter" width="322"\]![happy](https://algoritmosdescomplicados.files.wordpress.com/2017/07/giphy1.gif) Ficou sensacional!\[/caption\]
+<ImagePoster caption="Ficou sensacional!" :src="require('@/assets/img/happy.gif')" />
 
 Claro, isso é só o começo
 
-Duvidas? gostou? Me acha um idiota?
-
-Comenta ai!!
-
- Angeliski
+<Signature />

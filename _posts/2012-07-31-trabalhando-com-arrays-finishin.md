@@ -33,6 +33,4 @@ Logo de cara ela declara um k qualquer e atribui para ele o ultimo indice do Arr
 Logica amigão, pense assim, você passa para a função um valor n que é o tamanho do Array, mas isso nada quer dizer pra ela, esse valor só representa apartir da onde ela vai buscar. Se você tem um Array de 100 posições e tem certeza que não esta nas ultimas 20, você passa 80 para a função, ela começa a procurar na posição 79 (n-1). De repente ela retorna o indice 46, mas como ter certeza de que não tem mais nenhum valor igual a x no restante do Array? É só passar para a função o valor de n como 46, assim ela vai iniciar a busca em 45 (n-1), testando o restante. Se o retorno for -1, você sabe que o indice 45 é o unico que contem um valor igual a x, se não você manda esse novo indice para ela testar os outros, isso até que o retorno seja -1,assim você tera todos os indices onde o valor de x esta.
 
 
-Abraço! Qualquer duvida, comenta ai.
-
-Angeliski
+<Signature />

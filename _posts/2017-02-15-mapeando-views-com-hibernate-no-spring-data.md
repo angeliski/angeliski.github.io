@@ -1,7 +1,6 @@
 ---
 title: "Mapeando views com Hibernate no spring-data"
 date: "2017-02-15"
-coverImage: "spring_security_spring_data_jpa.png"
 ---
 
 Um framework sensacional que existe para persistência de dados  é  o [Hibernate](http://hibernate.org/). Ele simplifica uma série de operações através da sua abstração,  permitindo que você realize interações com o banco sem necessariamente escrever SQL. Mas o assunto não é sobre ele nem sobre outra maravilha que é o [spring-data](http://projects.spring.io/spring-data/). Não se preocupe se você não conhece essas ferramentas, vamos falar  delas em outro post.
@@ -59,7 +58,7 @@ public class PessoaComEndereco {
 
 Como você pode ver,  a view teve seu id anotado no id da pessoa, acontece que quando tentarmos recuperar os dados de Bruce dentro da aplicação através da nossa view, vamos ter um problema. Veja só:
 
-![erro-intellij-enderec%cc%a7o-duplicado](https://algoritmosdescomplicados.files.wordpress.com/2017/02/erro-intellij-endereccca7o-duplicado.png)
+<ImagePoster caption="Intellij mostrando o registro duplicado" :src="require('@/assets/img/erro-intellij-endereco-duplicado.png')" />
 
 Se você executar o teste **carregarEnderecosEsperandoDuplicidade** presente na classe **ViewHibernateSpringDataApplicationTests** vai obter o mesmo resultado: O mesmo endereço é carregado duas vezes.
 
@@ -87,7 +86,7 @@ public class PessoaComEnderecoIdEmbeddable {
 
 Agora sim, nosso resultado está correto quando realizamos a busca:
 
-![busca-correta-embeddedid](https://algoritmosdescomplicados.files.wordpress.com/2017/02/busca-correta-embeddedid.png)
+<ImagePoster caption="Intellij mostrando apenas um registro" :src="require('@/assets/img/busca-correta-embeddedid.png')" />
 
 Isso resolve o nosso **atual** problema, só que nossas views quase nunca são tão enxutas e provavelmente não terão um conjunto de identificação único que sempre faça sentido.
 
@@ -151,6 +150,4 @@ Sugestões e melhorias no código são bem vindas, basta abrir uma issue/pull re
 
 Qual estratégia você vai usar vai depender do seu contexto, eu só apresentei as abordagens. E você já teve um problema parecido? Abordou de outra forma?
 
- 
-
-Duvidas? gostou? Me acha um idiota? Comenta ai!! Angeliski
+<Signature />

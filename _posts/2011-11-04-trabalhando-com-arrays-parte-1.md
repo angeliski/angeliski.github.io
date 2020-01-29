@@ -166,6 +166,5 @@ Referencias Usadas:
 
 [Dicas de Programação](https://dicasdeprogramacao.com.br/tipos-de-dados-primitivos/ "Variaveis Primitivas")
 
-Duvidas? gostou? Me acha um idiota?
 
-Angeliski
+<Signature />

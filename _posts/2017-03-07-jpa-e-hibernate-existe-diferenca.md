@@ -1,7 +1,6 @@
 ---
 title: "JPA e Hibernate - Existe diferença?"
 date: "2017-03-07"
-coverImage: "jpahibernate.jpg"
 ---
 
 Uma das dúvidas mais comuns para quem está iniciando com os frameworks de [ORM](http://www.devmedia.com.br/orm-object-relational-mapper/19056) é:
@@ -10,7 +9,7 @@ Uma das dúvidas mais comuns para quem está iniciando com os frameworks de [ORM
 
 E normalmente quando você faz essa pergunta a reação costuma ser:
 
-![Mulher fazendo cara de decepção](https://algoritmosdescomplicados.files.wordpress.com/2017/02/tumblr_lu0gzod3rb1qcfjva.gif)
+<ImagePoster caption="Mulher fazendo cara de decepção" :src="require('@/assets/img/roll_eyes.gif')" />
 
 Então vamos aprender o que são esses dois caras e porque as pessoas fazem essa cara pra você!
 
@@ -48,12 +47,8 @@ Imagine que o JPA é uma interface (muito bem documentada) enquanto o Hibernate 
 
 ## Então só vou usar JPA!
 
-![Yoda lhe dizendo que você vai falhar](https://algoritmosdescomplicados.files.wordpress.com/2017/03/87i8pkmdcakw8.gif)
+<ImagePoster caption="Yoda lhe dizendo que você vai falhar" :src="require('@/assets/img/yoda_you_fail.gif')" />
 
 O JPA não é a bala de prata. Em algumas situações pode ser vantajoso usar classes, anotações ou funcionalidades que são exclusivas do Hibernate (ou do EclipseLink ou qualquer que seja a sua implementação). O JPA é uma ferramenta para criar um padrão entre as aplicações, tanto para ajudar desenvolvedores quanto para criar aplicações que tem alta flexibilidade.
 
-Duvidas? gostou? Me acha um idiota?
-
-Comenta ai!! 
-
-Angeliski
+<Signature />

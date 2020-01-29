@@ -1,7 +1,6 @@
 ---
 title: "Especificidade CSS - Black Magic!"
 date: "2017-01-09"
-coverImage: "1409556011css-selectors-sales.jpg"
 ---
 
 A minha principal formação vem do backend e por consequência, sempre existiu uma certa dificuldade em lidar com o CSS. Até o dia que eu descobri que ele não funciona aleatoriamente! Hoje eu vou mostrar a magia que existe por baixo do funcionamento do css.
@@ -32,7 +31,7 @@ Esse é um dos usos básicos, definimos uma classe na nossa div e atribuímos u
 
 Nesse caso, dois seletores se aplicam a div, tanto a classe quanto o id. Você sabe qual vai ser a cor aplicada na div? Se você conhece um pouco de css sabe que é a cor aplicada vai ser a verde. Mas a pergunta verdadeira é, você sabe porque é a cor verde?
 
-![3o6ztasg35pqqxzejg](https://algoritmosdescomplicados.files.wordpress.com/2016/12/3o6ztasg35pqqxzejg.gif)
+<ImagePoster caption="Tipo magia" :src="require('@/assets/img/like_magic.gif')" />
 
 Por muito tempo eu não entendi muito bem como as regras se aplicavam. Eu sabia que o id tinha prioridade sobre a classe, mas eu não sabia porque isso. Até que eu aprendi sobre **Especificidade. **
 
@@ -48,10 +47,11 @@ Se você observar, o valor obtido pelo seletor do ID é maior que o da classe. I
 }
 ``` 
 
-O valor desse seletor segue a mesma regra. Temos o valor 0013, pois existem 3 elementos (quarto número) e apenas ma classe(terceiro número). Fica um pouco confuso não? Talvez uma imagem ajude: ![cover](https://algoritmosdescomplicados.files.wordpress.com/2017/01/cover.png) Além da imagem, fica a recomendação [dessa página](http://www.laurensperber.com/2013/06/25/css-specify-me/) que mostra o score de um seletor. Se você prestou atenção no texto até aqui percebeu que a imagem acima só tem três casas e eu venho falando até agora de 4 casas. Essa quarta casa é "ativada" quando você usa aquele !important (Não faça isso. Mesmo) no seu código. Uma última coisa que vale a pena mencionar, é que caso dois seletores tenham o mesmo valor, o último a aparecer vence. Espero que agora o css não seja mais um mistério para você apesar de ainda continuar complicado.
+O valor desse seletor segue a mesma regra. Temos o valor 0013, pois existem 3 elementos (quarto número) e apenas ma classe(terceiro número). Fica um pouco confuso não? Talvez uma imagem ajude: 
 
-Duvidas? gostou? Me acha um idiota?
+<ImagePoster caption="Especificidade" :src="require('@/assets/img/css_specificity.png')" />
 
-Comenta ai!!
+Além da imagem, fica a recomendação [dessa página](http://www.laurensperber.com/2013/06/25/css-specify-me/) que mostra o score de um seletor. Se você prestou atenção no texto até aqui percebeu que a imagem acima só tem três casas e eu venho falando até agora de 4 casas. Essa quarta casa é "ativada" quando você usa aquele !important (Não faça isso. Mesmo) no seu código. Uma última coisa que vale a pena mencionar, é que caso dois seletores tenham o mesmo valor, o último a aparecer vence. Espero que agora o css não seja mais um mistério para você apesar de ainda continuar complicado.
 
-Angeliski
+
+<Signature />

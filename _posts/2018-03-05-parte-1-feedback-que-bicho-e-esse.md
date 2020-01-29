@@ -1,7 +1,6 @@
 ---
 title: "[Parte 1] Feedback! Que bicho é esse?"
 date: "2018-03-05"
-coverImage: "iulian-pana-513255-unsplash.jpg"
 ---
 
 Desde o ano passado eu tenho estudado sobre feedback. Essa ferramenta é uma das mais importantes, tanto no quesito pessoal quanto ao profissional. Ela permite a cada um de nós evoluirmos como indivíduo e como profissional. Mas existem diversos mistérios envolvidos em um feedback, tanto para dar, como para receber de forma assertiva. Por isso eu resolvi escrever uma série de artigos, destrinchando e aprofundando tudo que eu tenho aprendido sobre feedback.
@@ -70,6 +69,4 @@ Você já pensou que as suas relações pessoais também precisam de feedback? S
 
 \[caption id="attachment\_1804" align="aligncenter" width="480"\]![giphy3](https://algoritmosdescomplicados.files.wordpress.com/2018/02/giphy3.gif) Muito para aprender, você ainda tem\[/caption\]
 
-Duvidas? gostou? Me acha um idiota?
-
-Comenta ai!! Angeliski
+<Signature />

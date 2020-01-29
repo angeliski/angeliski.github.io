@@ -74,8 +74,4 @@ def t (join-name))
 
  Aqui você pode ver a atribuição de uma função a uma variável e logo em seguida a execução dela. Existem outras interações que podemos fazer com as funções, mas acho que com isso você já consegue começar a entender a linguagem. Até a próxima!
 
-Duvidas? gostou? Me acha um idiota?
-
-Comenta ai!!
-
-Angeliski
+<Signature />

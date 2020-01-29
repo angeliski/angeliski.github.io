@@ -1,7 +1,6 @@
 ---
 title: "Provider, Service, Factory - Qual a diferença?"
 date: "2016-12-21"
-coverImage: "banner-angularjs.jpg"
 ---
 
 Esse post nasceu de um pedido de um amigo que me ensinou muita coisa sobre Javascript.
@@ -128,8 +127,4 @@ Pois é, **TUDO PROVIDER.** Mas isso não é segredo, tanto que a [documentaçã
 
  
 
-Duvidas? gostou? Me acha um idiota?
-
-Comenta ai!!
-
-Angeliski
+<Signature />

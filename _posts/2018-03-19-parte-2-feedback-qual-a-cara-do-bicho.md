@@ -125,6 +125,5 @@ A primeira e segunda parte foram focadas em nos contextualizar sobre o feedback 
 
 A partir do próximo post vamos começar a olhar o outro lado: O que precisamos saber para receber um feedback de forma efetiva? Vamos entender quais peças a nossa mente nos prega e como lidar com isso.
 
-Duvidas? gostou? Me acha um idiota?
 
-Comenta ai!! Angeliski
+<Signature />

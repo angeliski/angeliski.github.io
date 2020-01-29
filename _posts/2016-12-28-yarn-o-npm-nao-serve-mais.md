@@ -1,7 +1,6 @@
 ---
 title: "Yarn - O NPM não serve mais?"
 date: "2016-12-28"
-coverImage: "yarn.jpg"
 ---
 
 A pouco tempo o Facebook disponibilizou para a comunidade de desenvolvimento o **Yarn,** um gerenciador de dependências parecido com o **npm**. Tão parecido que a única diferença na estrutura que ele gera é o **yarn.lock**,  mas vamos explicar o que tudo isso significa.
@@ -28,8 +27,4 @@ Sim, o Node tem o _shrinkwrap,_ mas o primeiro problema dele é que ele não é
 
 As vantagens que o **Yarn**traz logo de cara são bacanas, mas o mais interessante é que não existe um "processo de migração" do **npm** para o **Yarn.** Como a estrutura padrão é a mesma, você pode usar na sua maquina sem que ninguém mais do seu time use... Levando em conta o custo disso claro, como nem todos do time usam, a chance do yarn.lock ficar errado/desatualizado é enorme. Só que o que conta é que você não precisa fazer grandes mudanças no seu projeto para começar a usar o **Yarn.** É apenas sair usando!
 
-Duvidas? gostou? Me acha um idiota?
-
-Comenta ai!!
-
-Angeliski
+<Signature />

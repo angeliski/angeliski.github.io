@@ -1,7 +1,6 @@
 ---
 title: "Começando com Clojure"
 date: "2016-12-05"
-coverImage: "learnclojure10.jpg"
 ---
 
 Pouco tempo atrás eu fiz uma publicação falando sobre a [programação funcional](/2016/11/21/o-que-a-programacao-funcional-pode-fazer-por-voce/) e em algumas vantagens que ela traz. Hoje nós vamos colocar um pouco da teoria em prática. Pra colocar a nossa programação funcional em prática escolhi a linguagem Clojure porque eu comecei a estudar ela faz pouco tempo (então se você conhece a linguagem e me ver falando alguma bobagem seja bem vindo para me corrigir).  Mas como diria o nosso amigo:
@@ -86,8 +85,6 @@ clojure-noob.core=> (def v1 2)
 #'clojure-noob.core/v2 clojure-noob.core=> (+ v1 v2) 7
 ```
 
-Essse post vai ficando por aqui(porque ele está bem maior do que eu imaginei), ele ensina algumas coisas simples mas importantes. No próximo artigo vamos falar sobre as funções, como definir, como usar, como elas existem e coisa e tal(se você quiser saber algo específico dar funções em Clojure deixa um comentário que eu tento incluir). Duvidas? gostou? Me acha um idiota?
+Essse post vai ficando por aqui(porque ele está bem maior do que eu imaginei), ele ensina algumas coisas simples mas importantes. No próximo artigo vamos falar sobre as funções, como definir, como usar, como elas existem e coisa e tal(se você quiser saber algo específico dar funções em Clojure deixa um comentário que eu tento incluir).
 
-Comenta ai!!
-
-Angeliski
+<Signature />

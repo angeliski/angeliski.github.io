@@ -1,7 +1,6 @@
 ---
 title: "Deploy no Now com Travis CI"
 date: "2017-07-28"
-coverImage: "now.png"
 ---
 
 Recentemente eu precisei fazer algo que eu achei que era simples. Configurar um projeto no Github, para fazer o build no [Travis](https://travis-ci.org) e o Deploy no [Now](https://zeit.co/now). Depois de três dias procurando informações de como fazer isso:
@@ -112,6 +111,4 @@ Feito!
 
 Com isso o seu comando de publicação só é executado na branch master e quando não for um pull-request (Os pull-requests para master tem como branch a master)
 
-Duvidas? gostou? Me acha um idiota?
-
-Comenta ai!! Angeliski
+<Signature />

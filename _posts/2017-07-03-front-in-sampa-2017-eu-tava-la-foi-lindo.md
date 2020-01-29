@@ -1,7 +1,6 @@
 ---
 title: "Front In Sampa 2017 - Eu tava lá, foi lindo"
 date: "2017-07-03"
-coverImage: "des1gnon-eventos-de-design-em-2017-frontinsampa.jpg"
 ---
 
 Aconteceu em 1 de Julho a 6ª edição do Front In Sampa. Foi a primeira vez que eu tive a oportunidade de participar do evento, o que eu posso dizer?
@@ -124,11 +123,7 @@ Por isso, eu escrevi esse texto, para agradecer, não só ao Zeno, mas a cada um
 
 Ps. Eu pedi para os palestrantes me passarem os links dos slides, conforme eles me passarem eu atualizo aqui. Se rolar uns videos, coloco também. :)
 
-Duvidas? gostou? Me acha um idiota?
-
-Comenta ai!! Angeliski
-
- 
+<Signature />
 
 * * *
 

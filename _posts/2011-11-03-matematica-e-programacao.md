@@ -33,6 +33,4 @@ Ta vamos resumir o texto de modo que você possa se lembrar sempre:
 Não precisa gostar delas, mas se você quer ser um Alguêm, melhor aprender elas.
 
 
-Duvidas? gostou? Me acha um idiota?
-
-Comenta ai!! Angeliski
+<Signature />

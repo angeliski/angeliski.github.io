@@ -1,7 +1,6 @@
 ---
 title: "Porque o Intellij?"
 date: "2017-03-28"
-coverImage: "jetbrains_drive_to_develop.png"
 ---
 
 Desde que eu comecei a programar na faculdade, eu sempre usei o eclipse como IDE. Ele tem uma interface intuitiva e é uma plataforma extremamente extensa de plug-ins. So que esse post é sobre o quando eu comecei a trabalhar com o intellij e como isso foi sensacional.
@@ -30,7 +29,7 @@ Outro detalhe do Intellij é que ele tem uma curva de aprendizado. Pra alguém q
 
 Existe ainda um cenário pior, você trabalha com o Eclipse por muito tempo e resolve testar o Intellij no trabalho.
 
-\[caption id="attachment\_1251" align="aligncenter" width="286"\]![giphy](https://algoritmosdescomplicados.files.wordpress.com/2016/12/giphy.gif) **CAOS**\[/caption\]
+<ImagePoster caption="Um cara fazendo tudo errado no trabalho" :src="require('@/assets/img/work_fail.gif')" />
 
 Você fica lá tentando fazer as coisas como no eclipse, mas nada dá certo. E ai vem aquele bug e você precisa resolver logo... Lá se foi a sua tentiva de usar o Intellij.
 
@@ -51,8 +50,4 @@ Conforme eu ia pareando com os desenvolvedores, eles iam me mostrando como o Int
 
 Claro que isso são só algumas coisas. Conforme você vai usando, vai descobrindo outras coisas vantajosas pra você.
 
-Duvidas? gostou? Me acha um idiota?
-
-Comenta ai!! 
-
-Angeliski
+<Signature />

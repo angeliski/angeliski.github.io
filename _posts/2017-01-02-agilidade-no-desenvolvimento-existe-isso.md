@@ -1,7 +1,6 @@
 ---
 title: "Agilidade no Desenvolvimento - Existe isso?"
 date: "2017-01-02"
-coverImage: "tag-cloud-dissertacao-bernardo.gif"
 ---
 
 Atualmente eu trabalho na [Bluesoft](http://www.bluesoft.com.br/), uma empresa que é sem dúvidas referência em desenvolvimento ágil. Mas o que é esse tal de Desenvolvimento Ágil?
@@ -46,7 +45,8 @@ Para colocar isso em prática, existem ferramenta, por exemplo o [Kanban](http:/
 
 Aqui na empresa, usamos um conjunto misto de soluções, buscando otimizar nosso trabalho. Nós temos um quadro físico do Kanban onde nós gerenciamos nossas tarefas, mas ele é um reflexo da nossa ferramenta [Acelerato](https://www.acelerato.com/) que nós utilizamos tanto para gerenciar nossas atividades, quanto nossos quadros virtuais. Além disso, tiramos nossas métricas do Acelerato também.
 
-\[caption id="attachment\_892" align="alignnone" width="3264"\]![Quadro Kanban Bluesoft - Equipe Taurus](https://algoritmosdescomplicados.files.wordpress.com/2016/12/img_20161229_131752207.jpg) Esse é o Kanban físico que nosso time atua\[/caption\]
+<ImagePoster caption="Quadro Kanban Bluesoft - Equipe Taurus" :src="require('@/assets/img/kanban_bluesoft.jpg')" />
+
 
 Uma das ferramentas que usamos do Kanban é o [WIP](http://celsoavmartins.blogspot.com.br/2012/04/kanban-o-que-e-o-wip-e-por-limita-lo.html) (que é uma limitação para que nosso fluxo de trabalho seja continuo). Outra coisa que temos no nosso fluxo de trabalho são algumas coisas do Scrum. Eu digo algumas coisas, porque nós não fazemos Planning Poker, por exemplo, mas nossas iterações são limitadas em Sprints e buscamos fazer [dailys](http://www.desenvolvimentoagil.com.br/scrum/daily_scrum). Também fazemos [Kaizen](https://endeavor.org.br/kaizen/) em busca de uma melhoria continua. E falando em melhoria, sempre que possível realizamos [retrospectivas](https://www.infoq.com/br/articles/retrospectivas-ageis) com o time e com a empresa. E uma das coisas que eu não tinha visto até hoje que fazemos aqui é o [Feedback 360º](http://www.sobreadministracao.com/avaliacao-360-graus-o-que-e-e-como-funciona/).
 
@@ -64,8 +64,4 @@ Vou listar aqui alguns links interessantes que você pode dar uma olhada, se int
 
 Esses links são uma base legal, sobre várias pessoas falando de agilidade. Cada um deles agrega em um ponto e eu recomendo que quando você tiver um tempo, de uma olhada.
 
-Duvidas? gostou? Me acha um idiota?
-
-Comenta ai!!
-
-Angeliski
+<Signature />

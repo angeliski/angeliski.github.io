@@ -1,7 +1,6 @@
 ---
 title: "As mentiras que você conta para não testar"
 date: "2016-11-24"
-coverImage: "liar-liar-lb-1.jpg"
 ---
 
 Hoje o post vai ser sobre testes, uma das coisas mais importantes de todas quando estamos falando de software funcionando.
@@ -50,8 +49,5 @@ Time. Equipe. Conjunto. Você pode chamar do que quiser, mas não muda o fato de
 
 A ideia desse artigo é mostar que existem muitas coisas que pensamos que podem ser evitadas. Testar é bom, mas também é um hábito. É como correr, no começo você tem que se esforçar muito para correr poucos quilometros. Mas depois de um tempo praticando, corre muito em pouco tempo além de ser muito bom.
 
-Duvidas? gostou? Me acha um idiota?
 
-Comenta ai!!
-
-Angeliski
+<Signature />

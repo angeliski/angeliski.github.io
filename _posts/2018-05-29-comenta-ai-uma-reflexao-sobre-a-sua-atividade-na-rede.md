@@ -1,7 +1,6 @@
 ---
 title: "Comenta ai ! - Uma reflexão sobre a sua atividade na rede"
 date: "2018-05-29"
-cover: hello-world-cover.jpg
 ---
 
 Salve galera! Eu sei que eu fiquei um tempo sumido, mas uma maré de caos e desafios imundaram a minha vida do dia pra noite e eu tive que aplicar uma correria para dar conta de tudo.
@@ -42,8 +41,4 @@ Então, quando você consumir um texto, video, paper, palestra (e gostar), encon
 
 Essa pode ser a diferença entre ele continuar, ou parar. Pode ser isso que falte para ele se realizar. Pode ser que aquele obrigado, aquele elogio, faça o dia dele muito melhor. Pode ser que aquele seu compartilhamento leve aquele post a muitas pessoas que precisam daquele conteúdo. Tudo isso, pode ser a diferença. Você pode ser a diferença.
 
- 
-
-Duvidas? gostou? Me acha um idiota?
-
-Comenta ai!! Angeliski
+<Signature />

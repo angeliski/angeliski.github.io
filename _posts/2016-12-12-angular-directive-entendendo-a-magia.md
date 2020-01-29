@@ -1,7 +1,6 @@
 ---
 title: "Angular Directive - Entendendo a magia"
 date: "2016-12-12"
-coverImage: "i-know.jpg"
 ---
 
 Um framework que contém muitas ferramentas é o **[AngularJs](https://angularjs.org/)**. Esse post exige um conhecimento mínimo de angular, se você quiser um post mais básico deixa um comentário que eu tento escrever sobre.
@@ -166,7 +165,7 @@ angular.module('diretivaApp').directive('diretivaLoja', function (){ return { te
 
 Pronto!  Nossa diretiva está completa agora,  vamos  ver  o resultado.
 
-![botao-e-diretiva](https://algoritmosdescomplicados.files.wordpress.com/2016/12/botao-e-diretiva.png)
+<ImagePoster caption="Botão e Diretiva" :src="require('@/assets/img/botao-e-diretiva.png')" />
 
 ##### _Ps. Sim, eu sei que o visual está ficando bem feio, mas esse não é nosso objetivo agora._
 
@@ -245,8 +244,4 @@ python -m SimpleHTTPServer 8000
 
 Você pode subir um servidor node também, vai do seu gosto. No próximo post sobre angular vamos nos aprofundar em outra técnicas para construir a nossa aplicação. Até lá eu já devo ter melhorado o visual dessa nossa página. :)
 
-Duvidas? gostou? Me acha um idiota?
-
-Comenta ai!!
-
-Angeliski
+<Signature />

@@ -1,7 +1,6 @@
 ---
 title: "Slice e Splice - Tem diferença?"
 date: "2018-01-19"
-coverImage: "elizabeth-lies-20237.jpg"
 ---
 
 Uma situação muito comum quando estamos trabalhando com Arrays em Javascript é a necessidade de ter que remover um item. No cenário onde temos exatamente o index que queremos remover nós podemos usar o **Splice**. Ou será o **Slice?**
@@ -67,8 +66,4 @@ O que o método **slice** faz é retornar uma cópia do array com base nos parâ
 
 Agora que nós conhecemos os dois, conseguimos perceber que as duas funções realmente são diferentes. **Splice** altera o objeto original, permitindo alterar e remover itens de um array. **Slice** não modifica o objeto original, apenas retorna uma cópia do array. Isso pode fazer a diferença no seu dia-a-dia.
 
- 
-
-Duvidas? gostou? Me acha um idiota?
-
-Comenta ai!! Angeliski
+<Signature />

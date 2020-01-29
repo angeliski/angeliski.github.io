@@ -19,8 +19,5 @@ Além de um incremento no seu CV tirar uma certificação te leva a fazer uma co
 
 Tirar uma certificação vai fazer o diferencial na sua carreira. Hoje estou em busca da minha OCJP 6! Quando eu conseguir eu dou um pulo aqui!
 
-Duvidas? gostou? Me acha um idiota?
 
-Comenta ai!!
-
-Angeliski
+<Signature />

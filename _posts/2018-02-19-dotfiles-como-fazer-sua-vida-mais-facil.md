@@ -49,6 +49,4 @@ Quando eu comecei nesse mundo de dotfiles, a primeira coisa que eu pensei foi:
 
 E qual é o problema nisso? Acontece que, seja quem for, as maneira de trabalho são muito diferentes. Você e o Martin Fowler tem maneiras diferentes de pensar e isso muda tudo. Como você vai pensar num atalho que ele usa? Mesmo que você leia os arquivos, não vai ser natural pra você, vai rolar um esforço, o que remove o propósito de produtividade. Não me entenda errado, não estou dizendo pra você não copiar, olhar, duplicar dotfiles dos outros, mas quero que você reflita sobre isso. Aquilo que você está usando, faz sentido pra você? Existem companhias por exemplo, que usam esses arquivos de configuração para manter um padrão nos editores e afins. Isso tem muita utiliade em alguns casos, mas cautela. Antes de usar os arquivos de configuração de outra pessoa, lembre-se que isso é algo extremamente pessoal e por consequência, tem muito  a ver com a maneira de trabalho de cada um.
 
-Duvidas? gostou? Me acha um idiota?
-
-Comenta ai!! Angeliski
+<Signature />

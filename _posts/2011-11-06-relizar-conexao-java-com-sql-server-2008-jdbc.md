@@ -112,6 +112,4 @@ public class Main {
 }
  ```
 
-Duvidas? Gostou? Me acha um idiota? Comenta ai!
-
-Angeliski
+<Signature />

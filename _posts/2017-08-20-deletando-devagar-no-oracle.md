@@ -1,7 +1,6 @@
 ---
 title: "Deletando devagar no Oracle?"
 date: "2017-08-20"
-coverImage: "oracle-database-12c.jpg"
 ---
 
 Salve Galera! Hoje eu venho trazer uma dica rápida mas que me ajudou no trabalho.
@@ -16,6 +15,4 @@ Pois é. Como pode um negocio desses? Depois de muita procura e testes eu descob
 
 Claro, esse é um caso bem especifico. Existem ainda outras situações que você pode querer deletar muitos registros, nesse caso pode ser mais rápido, criar uma tabela apenas com os registros que você vai manter... Mas isso é tema de outro post, outro dia.
 
-Duvidas? gostou? Me acha um idiota?
-
-Comenta ai!! Angeliski
+<Signature />

@@ -18,8 +18,7 @@ Porque usar o Maven?! Eu poderia simplesmente dizer que ele é fantástico e tav
 
 O primeiro passo é entrar no site do [Maven](http://migre.me/ev6TU "Apache Maven Download") e baixar o zip (atualmente na versão 3.0.5), lá tem o passo a passo pra configurar ele na sua maquina, é simplesmente a configuração de duas variáveis de ambiente. Além disso é provavel que você esteja usando uma IDE (Eclipse, por favor, Eclipse. Sem influências.. husahash), então você vai precisar configurar o  plugin na IDE para utilizar em conjunto.
 
-Resumo da História: Maven é um projeto fabuloso, que otimiza seu trabalho, nesse post só foi abordado o Maven pelo lado do Gerenciamento das Dependências, mas o Maven é muito mais que isso.  Duvidas? gostou? Me acha um idiota?
+Resumo da História: Maven é um projeto fabuloso, que otimiza seu trabalho, nesse post só foi abordado o Maven pelo lado do Gerenciamento das Dependências, mas o Maven é muito mais que isso. 
 
-Comenta ai!!
 
-Angeliski
+<Signature />

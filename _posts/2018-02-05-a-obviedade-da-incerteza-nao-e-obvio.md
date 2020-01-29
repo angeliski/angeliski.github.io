@@ -1,7 +1,6 @@
 ---
 title: "A Obviedade da incerteza - Não é obvio?"
 date: "2018-02-05"
-coverImage: "joshua-earle-33443.jpg"
 ---
 
 Uma coisa que acontece muito nas nossas vidas é tentarmos passar uma informação para outras pessoas. Um dos problemas da comunicação é quando deixamos de passar dados, muitas vezes, por acreditar que aquela informação não é relevante. Afinal de contas, aquilo é obvio.
@@ -32,8 +31,4 @@ Outra coisa muito comum em relação as obviedades, são as perguntas idiotas. E
 
 \[caption id="attachment\_1782" align="aligncenter" width="250"\]![giphy2](https://algoritmosdescomplicados.files.wordpress.com/2018/01/giphy2.gif) Não seja um idiota\[/caption\]
 
- 
-
-Duvidas? gostou? Me acha um idiota?
-
-Comenta ai!! Angeliski
+<Signature />
