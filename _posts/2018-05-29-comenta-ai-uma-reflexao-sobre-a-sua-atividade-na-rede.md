@@ -7,7 +7,7 @@ Salve galera! Eu sei que eu fiquei um tempo sumido, mas uma maré de caos e desa
 
 Mas a boa notícia é que as coisas deve se normalizar daqui em diante!
 
-\[caption id="attachment\_1926" align="aligncenter" width="427"\]![giphy](https://angeliski.com.br/wp-content/uploads/2018/05/giphy.gif) Que legal!\[/caption\]
+<ImagePoster caption="Preguiça ficando feliz" :src="require('@/assets/img/nice.gif')" />
 
 E sobre o que vamos falar hoje?
 
@@ -19,14 +19,12 @@ Hoje eu quero trazer uma reflexão de como você deveria interagir mais na sua *
 
 A primeira parte é entender o que acontece. Pense no seguinte, você ai deve ler uma série de textos na internet, desde blogs sobre tecnologia, receitas, matérias sobre carro e por ai vai. Você diariamente (pelo menos eu espero que sim), acessa algum material que outra pessoa escreveu, dedicou um tempo a preparar e executar (esse texto é um exemplo disso). Vamos imaginar que você lê em média, dez artigos todo dia. Mas você já parou para contar, quantas vezes você agradece por aquele conteúdo?
 
-\[caption id="attachment\_1927" align="aligncenter" width="414"\]![giphy-1](https://angeliski.com.br/wp-content/uploads/2018/05/giphy-1.gif) Ham... Obrigado?\[/caption\]
+<ImagePoster caption="Ham... Obrigado?" :src="require('@/assets/img/ham_thanks.gif')" />
 
 Isso mesmo, você não leu errado, eu disse **agradecer.** Seja com um comentário, seja compartilhando o conteúdo, seja adicionando um like/claps/up (ou qualquer outra coisa que indique que você apreciou aquele material). Acredito que bem menos que dez vezes por dia, com sorte uma vez.
 
-\[caption id="attachment\_1928" align="aligncenter" width="581"\]![giphy-2](https://angeliski.com.br/wp-content/uploads/2018/05/giphy-2.gif) Mas porque?\[/caption\]
-
+<ImagePoster caption="Mas porque?" :src="require('@/assets/img/but_why.gif')" />
  
-
 ## O Motivo
 
 Primeiro vamos esclarecer uma coisa, a grande maioria das pessoas que cria algum material para ensinar faz isso como uma maneira de retribuir a comunidade. Eu aprendi muito nos meetups, eventos, grupos do slack e por ai vai. Mesmo sem saber de tudo, eu acredito que tenho os meus dois centavos para oferecer para alguém que não tenha esses dois centavos. As pessoas não criam esse material para serem glorificadas pela multidão de leitores, mas para fomentar a troca de conhecimento dentro da comunidade.

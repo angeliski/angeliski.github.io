@@ -38,7 +38,7 @@ Se você executar esse código, vai notar que a **'Ecosport'** e o **'Fiesta'** 
 
 _"Hey Angeliski, eu vi que eu posso usar o delete pra apagar valores de um array também"_
 
-\[caption id="attachment\_1776" align="aligncenter" width="480"\]![Perigo, diz o Yoda](https://angeliski.com.br/wp-content/uploads/2018/01/giphy.gif) Perigo, diz o Yoda\[/caption\]
+<ImagePoster caption=" Perigo, diz o Yoda" :src="require('@/assets/img/yoda_danger.gif')" />
 
 Você não deveria (é minha recomendação só) usar delete para remover itens de um array. Porque? Quando você usar o delete, o array apenas remove a referência. Isso gera vários inconvenientes: O tamanho do array não é atualizado, a posição se mantém com o valor undefined e iterações sobre índice tem um potencial de problemas ilimitados. Eu te recomendo, a não fazer isso.
 

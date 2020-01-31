@@ -91,7 +91,7 @@ Claro, chegou aquela hora que você fala: "Show! Eu quero tudo isso, mas eu só 
 
 <ImagePoster caption="Menina do Jurassic Park com muito medo" :src="require('@/assets/img/fear_bug.gif')" />
 
- Você percebendo que a branch zoada quase entrou em produção\[/caption\]
+ Você percebendo que a branch zoada quase entrou em produção
 
 Sem panico, é mais simples do que o anterior agora que eu gastei um mês pra descobrir isso.
 
