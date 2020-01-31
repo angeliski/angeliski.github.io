@@ -17,7 +17,7 @@ Um padrão do sistemas unix hoje em dia é guardar as mais diversas configuraç�
 
 Isso nasceu a muito tempo e eu não vou entrar na discussão de bom ou ruim. (Se você estiver curioso a respeito, pode ler mais [aqui](https://mexapi.macpress.com.br/ordem-nos-dotfiles).)
 
-O negocio é que temos que conviver com isso e aceitando isso, podemos tornar nossas vidas mais fácil. Os mais diversos arquivos de configuração são armazenados nos chamados **dotfiles. **
+O negocio é que temos que conviver com isso e aceitando isso, podemos tornar nossas vidas mais fácil. Os mais diversos arquivos de configuração são armazenados nos chamados **dotfiles.**
 
 ## Facilitando a vida
 
@@ -27,7 +27,7 @@ _"Você não disse que ia facilitar a vida?"_
 
 Vou facilitar, mas primeiro você precisa entender qual é o problema que queremos resolver agora. Primeiro definimos que vamos salvar nossos _**dotfiles,**_ mas esbarramos no segundo problema: _**como gerenciar isso?**_
 
-## Código é _quase_ _sempre a resposta_
+## Código é <strike>_quase_</strike> _sempre a resposta_
 
 A primeira coisa que vamos definir é que precisamos de um controle de versão. Por se tratarem de arquivos que mudam com o tempo, é importante ter um registro e um controle dessas mudanças. Então, git neles. Você pode ficar livre para escolher onde colocar seus arquivos, mas eu recomendo o [Github.](http://github.com/) Porque? Por se tratar de um lugar onde os mais diversos códigos são compartilhados. Se você não conhece nada de Git ou de Github, pode fazer um curso fantástico [aqui](https://www.udemy.com/git-e-github-para-iniciantes/).
 
@@ -44,8 +44,6 @@ Eu não vou entrar (agora) na discussão se você deve ou não criar o seu próp
 Quando eu comecei nesse mundo de dotfiles, a primeira coisa que eu pensei foi:
 
 "Cara, precisa copiar o dotfiles de alguém fantástico! Assim eu vou ser fantástico também!"
-
-\[caption id="attachment\_1789" align="aligncenter" width="500"\]![giphy](https://algoritmosdescomplicados.files.wordpress.com/2018/02/giphy.gif) Tão triste isso\[/caption\]
 
 E qual é o problema nisso? Acontece que, seja quem for, as maneira de trabalho são muito diferentes. Você e o Martin Fowler tem maneiras diferentes de pensar e isso muda tudo. Como você vai pensar num atalho que ele usa? Mesmo que você leia os arquivos, não vai ser natural pra você, vai rolar um esforço, o que remove o propósito de produtividade. Não me entenda errado, não estou dizendo pra você não copiar, olhar, duplicar dotfiles dos outros, mas quero que você reflita sobre isso. Aquilo que você está usando, faz sentido pra você? Existem companhias por exemplo, que usam esses arquivos de configuração para manter um padrão nos editores e afins. Isso tem muita utiliade em alguns casos, mas cautela. Antes de usar os arquivos de configuração de outra pessoa, lembre-se que isso é algo extremamente pessoal e por consequência, tem muito  a ver com a maneira de trabalho de cada um.
 

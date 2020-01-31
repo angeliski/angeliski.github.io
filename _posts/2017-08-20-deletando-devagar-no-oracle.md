@@ -7,11 +7,12 @@ Salve Galera! Hoje eu venho trazer uma dica rápida mas que me ajudou no trabalh
 
 Atualmente a aplicação que eu desenvolvo tem seus dados salvos numa base de dados Oracle. A persistência é abstraída pelo nosso Hibernate, mas no fim do dia é no Oracle que a coisa acontece. Recentemente tivemos problema com uma deleção de registro que demorava muito tempo. Era uma tabela pequena, com no máximo cem registros, mas que demorava cerca de dois minutos para deletar.
 
-![really?](https://algoritmosdescomplicados.files.wordpress.com/2017/06/really.gif)
+<ImagePoster caption="Sério?" :src="require('@/assets/img/really.gif')" />
+
 
 Pois é. Como pode um negocio desses? Depois de muita procura e testes eu descobri o motivo. Durante uma deleção de registro o Oracle procura todas as referências daquela tabela e valida antes de executar. Em outras palavras, sempre que você executa um comando delete numa tabela, o Oracle pesquisa cada tabela que tem uma Foreign Key que aponta para para a tabela que você está tentando deletar. No meu caso, existia uma tabela imeeeeensa que tinha uma FK vinculada. Quando eu tentava deletar, o Oracle tinha que realizar um Full Scan para garantir que o registro que eu queria apagar não tinha nada vinculado. A Solução nesse caso foi criar um index que indexava somente a coluna da FK. Feito isso meu delete passou a ter um tempo de espera de 10s.
 
-![giphy13](https://algoritmosdescomplicados.files.wordpress.com/2017/07/giphy13.gif)
+<ImagePoster caption="Galera comemorando" :src="require('@/assets/img/so_happy.gif')" />
 
 Claro, esse é um caso bem especifico. Existem ainda outras situações que você pode querer deletar muitos registros, nesse caso pode ser mais rápido, criar uma tabela apenas com os registros que você vai manter... Mas isso é tema de outro post, outro dia.
 

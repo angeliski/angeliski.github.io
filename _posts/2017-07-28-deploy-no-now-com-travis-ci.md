@@ -5,7 +5,7 @@ date: "2017-07-28"
 
 Recentemente eu precisei fazer algo que eu achei que era simples. Configurar um projeto no Github, para fazer o build no [Travis](https://travis-ci.org) e o Deploy no [Now](https://zeit.co/now). Depois de três dias procurando informações de como fazer isso:
 
-![Surtando](https://algoritmosdescomplicados.files.wordpress.com/2017/07/giphy15.gif)
+<ImagePoster caption="Pato Donald surtando" :src="require('@/assets/img/crazy.gif')" />
 
 Se você já teve que fazer isso, ou está tentando fazer, entende bem do que eu estou falando. Borá lá ver como fazer isso?
 
@@ -34,7 +34,7 @@ Além disso, basta ativar o seu projeto no Travis. Isso já te garante 50% do ca
 
 Dai, você decide publicar seu projeto no [Now](https://zeit.co/now). É fácil, simples, um comando. Só que, como você faz isso pelo Travis? Vai lá, procura ai como faz, vamos ver o que você acha (sem contar esse post):
 
-\[caption id="attachment\_1629" align="aligncenter" width="360"\]![Pesquisa now](https://algoritmosdescomplicados.files.wordpress.com/2017/07/giphy16.gif) Evolução da pesquisa\[/caption\]
+<ImagePoster caption="Chorando por não achar nada na busca" :src="require('@/assets/img/cry.gif')" />
 
 Depois de muito tempo procurando como fazer isso, eu descobri que você pode [gerar um token no now](https://zeit.co/account/tokens) e usar isso para fazer o deploy. Com esse token configurado como uma variável de ambiente no Travis (não vai me comitar ele!) você pode atualizar seu arquivo **.travis.yml** para: 
 
@@ -58,7 +58,9 @@ Se você conhece o Now, sabe que é possível criar um alias para o seu site, se
 
 **Mas e se eu quiser fazer isso no deploy do Travis?**
 
-![Medo](https://algoritmosdescomplicados.files.wordpress.com/2017/07/giphy17.gif)Calma jovem, vou te dizer que é simples agora que eu aprendi essa budega.
+<ImagePoster caption="Power Ranger com medo" :src="require('@/assets/img/nooo.gif')" />
+
+Calma jovem, vou te dizer que é simples agora que eu aprendi essa budega.
 
 Mude seu arquivo **.travis.yml** para isso aqui:
 ```
@@ -86,7 +88,10 @@ Pronto, isso garante que quando seu deploy for feito, vai criar um alias 100% fu
 
 Claro, chegou aquela hora que você fala: "Show! Eu quero tudo isso, mas eu só quero que isso aconteça quando for na master", afinal de contas você não quer que toda branch que você tem vá pro ar, não é?
 
-\[caption id="attachment\_1671" align="aligncenter" width="480"\]![Bugou](https://algoritmosdescomplicados.files.wordpress.com/2017/07/giphy18.gif) Você percebendo que a branch zoada quase entrou em produção\[/caption\]
+
+<ImagePoster caption="Menina do Jurassic Park com muito medo" :src="require('@/assets/img/fear_bug.gif')" />
+
+ Você percebendo que a branch zoada quase entrou em produção\[/caption\]
 
 Sem panico, é mais simples do que o anterior agora que eu gastei um mês pra descobrir isso.
 

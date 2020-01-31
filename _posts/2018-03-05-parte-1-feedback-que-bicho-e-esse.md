@@ -55,7 +55,7 @@ Vamos começar pelo mais simples: _**receber um feedback é uma oportunidade de 
 
 Por outro lado, dar um feedback é crucial para seu desenvolvimento.
 
-\[caption id="attachment\_1797" align="aligncenter" width="244"\]![giphy1](https://algoritmosdescomplicados.files.wordpress.com/2018/02/giphy1.gif) O que?\[/caption\]
+<ImagePoster caption="Obama fazendo cara de ham?" :src="require('@/assets/img/what.gif')" />
 
 Sim. Se preocupar com outras pessoas agrega valor a sua vida, pois te permite aprofundar suas relações humanas. A empatia (se você quiser se aprofundar [clique aqui](https://pedroconsortebr.wordpress.com/2016/07/29/8-ted-talks-sobre-empatia/)) é uma caracteristica poderosa que deve ser desevolvida. Isso acontece naturalmente quando você entende as nuances de um feedback. Essa é só uma das oportunidades de desenvolvimento ao dar um feedback, durante os artigos, vamos falar mais sobre isso tudo. Dar feedback te ajuda a aprender como se comunicar melhor, como se expressar, te auxilia a entender o contexto das situações envolvidas, até mesmo a prestar atenção em detalhes que você não prestária antes. Como eu disse, _**é crucial para seu desenvolvimento.**_
 
@@ -63,10 +63,11 @@ Esse primeiro post é uma tremenda introdução. O intuito dele é preparar as q
 
 **_O feedback é importante na sua vida pessoal também, não só no trabalho_**
 
-\[caption id="attachment\_1802" align="aligncenter" width="480"\]![giphy2](https://algoritmosdescomplicados.files.wordpress.com/2018/02/giphy2.gif) Por essa você não esperava\[/caption\]
+<ImagePoster caption="O que?" :src="require('@/assets/img/whattt.gif')" />
 
 Você já pensou que as suas relações pessoais também precisam de feedback? Sabe aquele amigo que sempre chega atrasado? Ou aquela namorada que é **atenciosa demais** as vezes? Não vamos esquecer dos seus pais, que fazem tudo pra você. Ao longo dessa série você vai perceber que o feedback seria eficiente em todos esses casos, seja deixando claro que você não gosta de algo para que aquilo mude, ou reconhecendo esforços para aqueles que merecem reconhecimento. O feedback não é uma ferramenta profissional, mas sim uma ferramenta de crescimento, e saber empregar ela na sua vida, seja ela profissional ou pessoal, te ajudará cada vez mais a crescer enquanto você favorece as pessoas ao seu redor para o crescimento também. Existem sutilezas que precisam ser trabalhadas em relações profissionais e pessoais, mas ao longo do tempo vamos tentar deixar claro isso também, para que você se torne um mestre jedi expert em feedback.
 
-\[caption id="attachment\_1804" align="aligncenter" width="480"\]![giphy3](https://algoritmosdescomplicados.files.wordpress.com/2018/02/giphy3.gif) Muito para aprender, você ainda tem\[/caption\]
+<ImagePoster caption="Yoda:  Muito para aprender, você ainda tem" :src="require('@/assets/img/ioda_learn.gif')" />
+
 
 <Signature />

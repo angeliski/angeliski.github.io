@@ -13,7 +13,8 @@ Uma frase que usamos sem nos dar conta do impacto dela é "isso é obvio". Quand
 
 # AS COISAS NÃO SÃO OBVIAS
 
-\[caption id="attachment\_1780" align="aligncenter" width="450"\]![giphy1](https://algoritmosdescomplicados.files.wordpress.com/2018/01/giphy1.gif) Você se dando conta de que isso era obvio\[/caption\]
+<ImagePoster caption="Ted Mosby chocado" :src="require('@/assets/img/oh_my_god.gif')" />
+Você se dando conta de que isso era obvio
 
 Eu sei. É inacreditável, mas é verdade. Vamos pensar juntos.
 
@@ -29,6 +30,7 @@ Tem coisas obvias, mas por favor, não acredite nisso. Quando você deixa claro 
 
 Outra coisa muito comum em relação as obviedades, são as perguntas idiotas. Eu sou naturalmente um cara questionador, e como tal, sempre tenho uma duzia pergunta na ponta da língua. Acontece que nem sempre as perguntas que eu faço são imensamente originais, porque além de ser curioso, eu gosto muito de alinhar expectativas. Se você me pede para fazer uma tela de login, eu naturalmente vou questionar se vai haver um link para "esqueci minha senha". Isso poderia ser considerado obvio em vários cenários, só que é importante destacar que perguntar isso não é idiota. O motivo é simples, existem casos em que o comportamento é diferente do esperado, o que pode resultar em uma entrega diferente do esperado. Questionar é algo que deve ser feito sempre, porque permite que você entenda exatamente o que as pessoas estão esperando de você. Seja no trabalho ou na vida pessoal, questionar te permite alinhar e obter detalhes sobre uma determinada situação. Existem pessoas que tem uma tendência a diminuir os outros quando escutam perguntas que sabem a resposta, e por consequência, acham que é uma pergunta idiota. Não se sinta mal quando escutar essas pessoas, elas que são **idiotas**.
 
-\[caption id="attachment\_1782" align="aligncenter" width="250"\]![giphy2](https://algoritmosdescomplicados.files.wordpress.com/2018/01/giphy2.gif) Não seja um idiota\[/caption\]
+<ImagePoster caption="Padawan dizendo que não entende" :src="require('@/assets/img/not_understand.gif')" />
+Não seja um idiota
 
 <Signature />
