@@ -1,6 +1,8 @@
 ---
 title: "As mentiras que você conta para não testar"
 date: "2016-11-24"
+tags: 
+- teste
 ---
 
 Hoje o post vai ser sobre testes, uma das coisas mais importantes de todas quando estamos falando de software funcionando.

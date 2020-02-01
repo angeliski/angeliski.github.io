@@ -1,6 +1,9 @@
 ---
 title: "Trabalhando com Arrays - Parte 1"
 date: "2011-11-04"
+tags: 
+- iniciante
+- programação
 ---
 
 Uma estrutura que eu tenho visto dar trabalho para o pessoal são os Arrays, então resolvi escrever um pouco sobre eles, vamos antes fazer algumas considerações. 

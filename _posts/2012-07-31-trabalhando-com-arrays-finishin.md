@@ -1,6 +1,9 @@
 ---
 title: "Trabalhando com Arrays - Finishin..."
 date: "2012-07-31"
+tags: 
+- iniciante
+- programação
 ---
 
 Faz Muito tempo que não posto alguma coisa.. vou tentar manter uma constancia de posts.. vamos terminar aquele post de arrays? falta só uma certa busca...

@@ -1,6 +1,10 @@
 ---
 title: "[Parte 2] Feedback! Qual a cara do bicho?"
 date: "2018-03-19"
+tags: 
+- iniciante
+- carreira
+- soft skill
 ---
 
 Até aqui já alinhamos pontos importantes, o que é feedback e a importância dele. Vamos refletir agora o que podemos aprender sobre dar feedback.
@@ -11,13 +15,13 @@ Bora lá?
 
 Se você quiser acompanhar a série, pode ver os links aqui:
 
-- [\[Parte 1\] Feedback! Que bicho é esse?](/2018/03/05/parte-1-feedback-que-bicho-e-esse/#more-1792)
-- \[Parte 2\] Feedback! Qual a cara do bicho?
-- \[Parte 3\] Feedback! Como domar esse bicho?
-- \[Parte 4\] Feedback! Gatilhos de verdade – a dificuldade de ver
-- \[Parte 5\] Feedback! Gatilhos de relacionamento – O desafio de nos
-- \[Parte 6\] Feedback! Gatilhos de identidade – o desafio do eu
-- \[Parte 7\] Feedback! O bicho foi domado
+- [[Parte 1] Feedback! Que bicho é esse?](/2018/03/05/parte-1-feedback-que-bicho-e-esse/#more-1792)
+- [Parte 2] Feedback! Qual a cara do bicho? (Você está aqui!)
+- [Parte 3] Feedback! Como domar esse bicho?
+- [Parte 4] Feedback! Gatilhos de verdade – a dificuldade de ver
+- [Parte 5] Feedback! Gatilhos de relacionamento – O desafio de nos
+- [Parte 6] Feedback! Gatilhos de identidade – o desafio do eu
+- [Parte 7] Feedback! O bicho foi domado
 
 Se você tiver alguma dúvida, pode comentar que eu respondo assim que der.
 

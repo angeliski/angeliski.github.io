@@ -1,6 +1,8 @@
 ---
 title: "Porque o Intellij?"
 date: "2017-03-28"
+tags: 
+- ferramental
 ---
 
 Desde que eu comecei a programar na faculdade, eu sempre usei o eclipse como IDE. Ele tem uma interface intuitiva e é uma plataforma extremamente extensa de plug-ins. So que esse post é sobre o quando eu comecei a trabalhar com o intellij e como isso foi sensacional.

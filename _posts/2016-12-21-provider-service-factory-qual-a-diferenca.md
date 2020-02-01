@@ -1,6 +1,8 @@
 ---
 title: "Provider, Service, Factory - Qual a diferença?"
 date: "2016-12-21"
+tags: 
+- javascript
 ---
 
 Esse post nasceu de um pedido de um amigo que me ensinou muita coisa sobre Javascript.

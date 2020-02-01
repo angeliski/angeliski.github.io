@@ -1,6 +1,8 @@
 ---
 title: "Deploy no Now com Travis CI"
 date: "2017-07-28"
+tags: 
+- deploy
 ---
 
 Recentemente eu precisei fazer algo que eu achei que era simples. Configurar um projeto no Github, para fazer o build no [Travis](https://travis-ci.org) e o Deploy no [Now](https://zeit.co/now). Depois de três dias procurando informações de como fazer isso:

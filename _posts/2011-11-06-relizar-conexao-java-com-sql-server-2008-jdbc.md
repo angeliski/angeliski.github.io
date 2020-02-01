@@ -1,6 +1,10 @@
 ---
 title: "Relizar Conexão Java com Sql Server 2008 - JDBC"
 date: "2011-11-06"
+tags: 
+- iniciante
+- programação
+- sql
 ---
 
 Depois de apanhar por 3 dias de varios computadores que não queriam conectar no banco de MODO algum, finalmente descobri o problema. Agora vamos a um tutorial pra deixar bem claro de como fazer isso.

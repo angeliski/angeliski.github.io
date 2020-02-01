@@ -1,6 +1,9 @@
 ---
 title: "Dotfiles - Como fazer sua vida mais fácil"
 date: "2018-02-19"
+tags: 
+- iniciante
+- dicas
 ---
 
 Uma coisa que todo desenvolvedor tem (ou teve) que fazer é configurar o ambiente dele. Isso inclui, configurações de Git, SSH, instalar zsh, atalhos do sublime e por ai vai.

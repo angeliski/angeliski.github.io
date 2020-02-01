@@ -1,6 +1,9 @@
 ---
 title: "Front In Sampa 2017 - Eu tava lá, foi lindo"
 date: "2017-07-03"
+tags: 
+- eventos
+- carreira
 ---
 
 Aconteceu em 1 de Julho a 6ª edição do Front In Sampa. Foi a primeira vez que eu tive a oportunidade de participar do evento, o que eu posso dizer?

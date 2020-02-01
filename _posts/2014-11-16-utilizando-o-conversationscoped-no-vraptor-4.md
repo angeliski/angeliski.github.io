@@ -1,6 +1,8 @@
 ---
 title: "Utilizando o @ConversationScoped no VRaptor 4"
 date: "2014-11-16"
+tags: 
+- java
 ---
 
 O VRaptor em sua versão 4 utiliza o CDI 1.1 como base. E uma das considerações a serem feitas quando usamos o CDI é o escopo de vida dos objetos. Sempre é preciso escolher com cuidado o escopo, levando em consideração qual vai ser a aplicação do objeto. Utilizar o _@RequestScoped_ onde é necessário um _@ApplicationScoped_ pode ser desastroso. Um escopo muito util nesse cenário é o _@ConversationScoped_ que nos permite um controle maior conforme a nossa necessidade. A aplicação apresentada nesse tutorial está disponivel no GitHub: [ScoreCDI](https://github.com/angeliski/ScoreCDI "ScoreCDI"). Abaixo nosso Controller:

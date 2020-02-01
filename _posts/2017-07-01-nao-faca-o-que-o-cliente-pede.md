@@ -2,6 +2,9 @@
 title: "Não faça o que o cliente pede"
 date: "2017-07-01"
 cover: project_fail.jpg
+tags: 
+- iniciante
+- carreira
 ---
 
 Uma das coisas mais interessantes do desenvolvimento de software é a entrega. Você não precisa ser um desenvolvedor, porque não tem nada igual a ver as coisas funcionando, ver o olho do cliente brilhando com o problema dele resolvido:

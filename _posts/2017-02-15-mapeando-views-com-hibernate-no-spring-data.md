@@ -1,6 +1,8 @@
 ---
 title: "Mapeando views com Hibernate no spring-data"
 date: "2017-02-15"
+tags: 
+- java
 ---
 
 Um framework sensacional que existe para persistência de dados  é  o [Hibernate](http://hibernate.org/). Ele simplifica uma série de operações através da sua abstração,  permitindo que você realize interações com o banco sem necessariamente escrever SQL. Mas o assunto não é sobre ele nem sobre outra maravilha que é o [spring-data](http://projects.spring.io/spring-data/). Não se preocupe se você não conhece essas ferramentas, vamos falar  delas em outro post.

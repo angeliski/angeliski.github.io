@@ -1,6 +1,8 @@
 ---
 title: "Angular Directive - Entendendo a magia"
 date: "2016-12-12"
+tags: 
+- javascript
 ---
 
 Um framework que contém muitas ferramentas é o **[AngularJs](https://angularjs.org/)**. Esse post exige um conhecimento mínimo de angular, se você quiser um post mais básico deixa um comentário que eu tento escrever sobre.

@@ -1,6 +1,10 @@
 ---
 title: "[Parte 1] Feedback! Que bicho é esse?"
 date: "2018-03-05"
+tags: 
+- iniciante
+- carreira
+- soft skill
 ---
 
 Desde o ano passado eu tenho estudado sobre feedback. Essa ferramenta é uma das mais importantes, tanto no quesito pessoal quanto ao profissional. Ela permite a cada um de nós evoluirmos como indivíduo e como profissional. Mas existem diversos mistérios envolvidos em um feedback, tanto para dar, como para receber de forma assertiva. Por isso eu resolvi escrever uma série de artigos, destrinchando e aprofundando tudo que eu tenho aprendido sobre feedback.
@@ -13,13 +17,13 @@ A primeira coisa que precisamos fazer é alinhar expectativas. Essa série de ar
 
 A Parte 1 e Parte 2 vão tratar sobre como dar um feedback. O que é importante saber? Como fazer isso? Porque fazer isso? Qual o efeito disso na vida das pessoas (sua e delas)? Da parte 3 a 6 vamos falar sobre como receber um feedback (notou que a temática de receber feedback tem mais conteúdo que a parte de dar feedback?). Como podemos receber um feedback e aprender com ele? Como receber um feedback que consideramos inútil e ainda assim tirar algum proveito? Porque o feedback não é o que esperamos? Essa parte aborda diversas armadilhas da mente com o intuito de nos capacitar para aprender com nossos feedbacks. E finalmente teremos uma parte 7, onde vamos refletir sobre a essência do feedback, recapitular pontos importantes e encerrar nosso conteúdo. Vou deixar abaixo os títulos, e conforme os posts forem saindo, eu atualizo aqui:
 
-- \[Parte 1\] Feedback! Que bicho é esse?
-- [\[Parte 2\] Feedback! Qual a cara do bicho?](/2018/03/19/parte-2-feedback-qual-a-cara-do-bicho/)
-- \[Parte 3\] Feedback! Como domar esse bicho?
-- \[Parte 4\] Feedback! Gatilhos de verdade - a dificuldade de ver
-- \[Parte 5\] Feedback! Gatilhos de relacionamento - O desafio de nos
-- \[Parte 6\] Feedback! Gatilhos de identidade - o desafio do eu
-- \[Parte 7\] Feedback! O bicho foi domado
+- [Parte 1] Feedback! Que bicho é esse?
+- [[Parte 2] Feedback! Qual a cara do bicho?](/2018/03/19/parte-2-feedback-qual-a-cara-do-bicho/)
+- [Parte 3] Feedback! Como domar esse bicho?
+- [Parte 4] Feedback! Gatilhos de verdade - a dificuldade de ver
+- [Parte 5] Feedback! Gatilhos de relacionamento - O desafio de nos
+- [Parte 6] Feedback! Gatilhos de identidade - o desafio do eu
+- [Parte 7] Feedback! O bicho foi domado
 
 Se você tiver alguma dúvida, pode comentar que eu respondo assim que der.
 

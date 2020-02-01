@@ -1,6 +1,9 @@
 ---
 title: "O que a Programação Funcional pode fazer por você?"
 date: "2016-11-21"
+tags: 
+- iniciante
+- funcional
 ---
 
 Um dos tópicos da programação que se tem falando muito é a Programação Funcional... Algum de vocês devem estar se perguntando, que diabos é isso? Vamos começar esclarecendo algumas coisas então!

@@ -1,6 +1,9 @@
 ---
 title: "Clojure - Criando e Usando funções"
 date: "2016-12-19"
+tags: 
+- iniciante
+- funcional
 ---
 
 Se você acompanha o blog tem reparado que eu não publico sobre um assunto em especifico, mas sobre o que me der na tela um assunto bacana e diversificado a cada semana. Isso acontece porque o tema do post surge conforme as coisas vão aparecendo na minha timeline, seja pelo [Twitter](https://twitter.com/), pelo [InfoQ](https://www.infoq.com/), o [Mattermost](https://about.mattermost.com/) no trabalho ou no [Linkedin](https://www.linkedin.com/).

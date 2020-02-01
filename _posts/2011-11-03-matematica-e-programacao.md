@@ -1,6 +1,7 @@
 ---
 title: "Matematica e Programação"
 date: "2011-11-03"
+tags: iniciante
 ---
 
 Atualmente eu me encontro no 4º semestre do curso de ciência da computação, admito que realmente não tenho experiencia em industria (os Links que eu recomendo tem profissionais que tem isso), mas o meu objetivo nesse site não é ajudar você a entrar no mercado e se consagrar profissional, eu quero ajudar você a construir sua formação academica de modo a ter uma base forte para se tornar um bom profissional. 

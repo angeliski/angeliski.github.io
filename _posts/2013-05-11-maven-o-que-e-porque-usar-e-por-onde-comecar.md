@@ -1,6 +1,10 @@
 ---
 title: "Maven : O que é, porque usar e por onde começar"
 date: "2013-05-11"
+tags: 
+- iniciante
+- programação
+- java
 ---
 
 

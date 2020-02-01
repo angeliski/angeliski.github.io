@@ -1,6 +1,9 @@
 ---
 title: "Certificar ou não certificar, eis a questão"
 date: "2013-12-30"
+tags: 
+- iniciante
+- carreira
 ---
 
 Faz um tempão que eu não publico nada. Em parte porque o ultimo semestre da faculdade foi extremamente exaustivo. Em parte porque eu sou de uma preguiça monstruosa. O importante é que eu estou formado e com menos preguiça. Eu já falei uma vez que ia tentar manter uma constância de posts, então não vou me repetir, vou apenas fazer. Como diz uma amiga minha, "O melhor modo de dar o exemplo é ir na frente."

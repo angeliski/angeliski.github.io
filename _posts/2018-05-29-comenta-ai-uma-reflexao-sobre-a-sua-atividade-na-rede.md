@@ -1,6 +1,7 @@
 ---
 title: "Comenta ai ! - Uma reflexão sobre a sua atividade na rede"
 date: "2018-05-29"
+tags: comunidade
 ---
 
 Salve galera! Eu sei que eu fiquei um tempo sumido, mas uma maré de caos e desafios imundaram a minha vida do dia pra noite e eu tive que aplicar uma correria para dar conta de tudo.

@@ -1,6 +1,9 @@
 ---
 title: "Deletando devagar no Oracle?"
 date: "2017-08-20"
+tags: 
+- dicas
+- programação
 ---
 
 Salve Galera! Hoje eu venho trazer uma dica rápida mas que me ajudou no trabalho.

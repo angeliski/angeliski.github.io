@@ -1,6 +1,9 @@
 ---
 title: "Git e a dificuldade em renomear um arquivo"
 date: "2016-11-29"
+tags: 
+- git
+
 ---
 
 Quem trabalha com Git ou usa ele em casa, provavelmente já teve esse problema.

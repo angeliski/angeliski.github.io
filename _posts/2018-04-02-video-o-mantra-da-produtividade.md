@@ -2,6 +2,10 @@
 title: "Vídeo - O Mantra da Produtividade"
 date: "2018-04-02"
 coverImage: "rawpixel-com-296618-unsplash.jpg"
+tags: 
+- iniciante
+- carreira
+- soft skill
 ---
 
 Não sei se vocês sabem ao certo, mas eu atualmente trabalho na [Bluesoft](https://www.bluesoft.com.br/). Uma empresa MUITO bacana, que inclusive está [contratando](https://www.bluesoft.com.br/carreiras/#vagas) de Front até Analista de BI. Então jovem, se inscreve lá e vamo trabalhar junto!

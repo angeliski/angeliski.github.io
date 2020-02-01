@@ -1,6 +1,9 @@
 ---
 title: "Começando com Clojure"
 date: "2016-12-05"
+tags: 
+- iniciante
+- funcional
 ---
 
 Pouco tempo atrás eu fiz uma publicação falando sobre a [programação funcional](/2016/11/21/o-que-a-programacao-funcional-pode-fazer-por-voce/) e em algumas vantagens que ela traz. Hoje nós vamos colocar um pouco da teoria em prática. Pra colocar a nossa programação funcional em prática escolhi a linguagem Clojure porque eu comecei a estudar ela faz pouco tempo (então se você conhece a linguagem e me ver falando alguma bobagem seja bem vindo para me corrigir).  Mas como diria o nosso amigo:

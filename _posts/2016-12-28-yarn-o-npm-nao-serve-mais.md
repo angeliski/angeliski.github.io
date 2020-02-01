@@ -1,6 +1,8 @@
 ---
 title: "Yarn - O NPM não serve mais?"
 date: "2016-12-28"
+tags: 
+- javascript
 ---
 
 A pouco tempo o Facebook disponibilizou para a comunidade de desenvolvimento o **Yarn,** um gerenciador de dependências parecido com o **npm**. Tão parecido que a única diferença na estrutura que ele gera é o **yarn.lock**,  mas vamos explicar o que tudo isso significa.

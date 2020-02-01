@@ -1,6 +1,8 @@
 ---
 title: "Especificidade CSS - Black Magic!"
 date: "2017-01-09"
+tags: 
+- css
 ---
 
 A minha principal formação vem do backend e por consequência, sempre existiu uma certa dificuldade em lidar com o CSS. Até o dia que eu descobri que ele não funciona aleatoriamente! Hoje eu vou mostrar a magia que existe por baixo do funcionamento do css.

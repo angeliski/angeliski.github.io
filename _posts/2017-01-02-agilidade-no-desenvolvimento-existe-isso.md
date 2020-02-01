@@ -1,6 +1,8 @@
 ---
 title: "Agilidade no Desenvolvimento - Existe isso?"
 date: "2017-01-02"
+tags: 
+- carreira
 ---
 
 Atualmente eu trabalho na [Bluesoft](http://www.bluesoft.com.br/), uma empresa que é sem dúvidas referência em desenvolvimento ágil. Mas o que é esse tal de Desenvolvimento Ágil?

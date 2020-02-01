@@ -1,6 +1,9 @@
 ---
 title: "JPA e Hibernate - Existe diferença?"
 date: "2017-03-07"
+tags: 
+- iniciante
+- java
 ---
 
 Uma das dúvidas mais comuns para quem está iniciando com os frameworks de [ORM](http://www.devmedia.com.br/orm-object-relational-mapper/19056) é:

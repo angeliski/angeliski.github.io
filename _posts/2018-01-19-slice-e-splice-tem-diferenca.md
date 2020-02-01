@@ -1,6 +1,9 @@
 ---
 title: "Slice e Splice - Tem diferença?"
 date: "2018-01-19"
+tags: 
+- javascript
+- iniciante
 ---
 
 Uma situação muito comum quando estamos trabalhando com Arrays em Javascript é a necessidade de ter que remover um item. No cenário onde temos exatamente o index que queremos remover nós podemos usar o **Splice**. Ou será o **Slice?**
