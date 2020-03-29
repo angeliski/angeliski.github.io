@@ -925,17 +925,10 @@
   dependencies:
     cross-spawn "^6.0.5"
 
-"@vuepress/plugin-medium-zoom@1.0.0":
+"@vuepress/plugin-medium-zoom@1.0.0", "@vuepress/plugin-medium-zoom@^1.0.0-rc.1":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@vuepress/plugin-medium-zoom/-/plugin-medium-zoom-1.0.0.tgz#6dce6150608707fc44e60b7c9d4a0d27e493f2b5"
   integrity sha512-ALjPi8CGLNKlViFPIWS2iD887hacYT28tLq3CaQOJaEP3/V6yv4kyqpDiX2kN7xB9TrIKjxnk1p916Ze3WX2zA==
-  dependencies:
-    medium-zoom "^0.4.0"
-
-"@vuepress/plugin-medium-zoom@^1.0.0-rc.1":
-  version "1.0.0-rc.1"
-  resolved "https://registry.yarnpkg.com/@vuepress/plugin-medium-zoom/-/plugin-medium-zoom-1.0.0-rc.1.tgz#78b81aad55621cf192667421eb73497cfe265068"
-  integrity sha512-yjMtzat6SUIsXHEjPn2xDYDqBdvRjJ9sZamBMAlodc95+P4BOce/VB6Q9VJeoCQ+Y7EW6hqisM8bQxluRWfbtA==
   dependencies:
     medium-zoom "^0.4.0"
 
@@ -994,10 +987,10 @@
     semver "^6.0.0"
     upath "^1.1.0"
 
-"@vuepress/theme-blog@^2.0.3":
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/@vuepress/theme-blog/-/theme-blog-2.0.3.tgz#faf99d58329fc1eada6b987883a8f8048c2cc5aa"
-  integrity sha512-fRv0x+PzoT1vmVulOLuTznB/ofaCZS91x51AHyrDo95e0Q33x1ACGzHan9wHo5yplZbNU10zXQh5/uZUhfzT+g==
+"@vuepress/theme-blog@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@vuepress/theme-blog/-/theme-blog-2.2.0.tgz#9f176b464c32997d6e65bf47095365c6fb091cfb"
+  integrity sha512-zAk3PJ3Sd7/eAF4iq2pYFOtl9b99P9knCnBox0qGgr6dYJ3ln0x6teIqV4F+soJEOGc3RqJ+LtOhR6n08cWkoQ==
   dependencies:
     "@vuepress/plugin-blog" "^1.9.2"
     "@vuepress/plugin-medium-zoom" "1.0.0"

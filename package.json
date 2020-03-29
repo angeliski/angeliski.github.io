@@ -20,7 +20,7 @@
   "homepage": "https://github.com/angeliski/angeliski.github.io#readme",
   "dependencies": {
     "@vuepress/plugin-blog": "^1.9.2",
-    "@vuepress/theme-blog": "^2.0.3",
+    "@vuepress/theme-blog": "^2.2.0",
     "vuepress": "^1.2.0"
   },
   "devDependencies": {
