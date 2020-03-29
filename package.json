@@ -20,10 +20,10 @@
   "homepage": "https://github.com/angeliski/angeliski.github.io#readme",
   "dependencies": {
     "@vuepress/plugin-blog": "^1.9.2",
-    "@vuepress/theme-blog": "^2.0.3",
-    "vuepress": "^1.2.0"
+    "@vuepress/theme-blog": "^2.2.0",
+    "vuepress": "^1.4.0"
   },
   "devDependencies": {
-    "@vuepress/plugin-medium-zoom": "^1.0.0-rc.1"
+    "@vuepress/plugin-medium-zoom": "^1.4.0"
   }
 }
