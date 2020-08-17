@@ -58,7 +58,11 @@ plugins: {
     options: {
       margin: 16
     }
-  }
+  },
+  'vuepress-plugin-canonical':    {
+      baseURL: 'https://angeliski.com.br',
+      stripExtension: true 
+    }
 },
 markdown: {
   lineNumbers: true
