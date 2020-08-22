@@ -41,7 +41,7 @@ import { Comment } from '@vuepress/plugin-blog/lib/client/components'
 
    .vuepress-post-cover
     width 100%
-  
+
 </style>
 
 <style src="prismjs/themes/prism-okaidia.css"></style>
