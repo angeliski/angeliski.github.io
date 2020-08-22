@@ -4,6 +4,7 @@
     <div class="vuepress-blog-theme-content">
       <h1 v-if="$page.frontmatter.title">{{$page.frontmatter.title}}</h1>  
       <Content/>
+      <RegisterForNews />
       <hr/>
       <Comment/>
     </div>
