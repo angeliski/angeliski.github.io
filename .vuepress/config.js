@@ -6,6 +6,9 @@ module.exports = {
   port: 8085,
   theme: 'theme',
   themeConfig: {
+    sitemap: {
+      hostname: 'https://angeliski.com.br',
+    },
     modifyBlogPluginOptions(blogPluginOptions){
       const comment = {
         service: 'disqus',
@@ -50,7 +53,13 @@ module.exports = {
       ]
   },
 },
+locales: {
+  '/': {
+    lang: 'pt-BR',
+  },
+},
 plugins: {
+  'vuepress-plugin-seo': {},
   '@vuepress/medium-zoom': {
     selector: 'img.zoom-custom-imgs',
     // medium-zoom options here

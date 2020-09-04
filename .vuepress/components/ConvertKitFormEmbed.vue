@@ -14,7 +14,7 @@ export default {
     }
   },
   mounted() {
-    //   https://angeliski.ck.page/6e136032a3/index.js
+    if (process.env.NODE_ENV === 'development') return;
     let externalScript = document.createElement('script')
     externalScript.setAttribute('src', `${this.domain}/${this.uid}/index.js`)
     externalScript.setAttribute('data-uid', this.uid)
