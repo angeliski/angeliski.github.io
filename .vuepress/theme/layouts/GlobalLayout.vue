@@ -3,7 +3,9 @@
     <Header/>
     <MobileHeader :isOpen="isMobileHeaderOpen" @toggle-sidebar="isMobileHeaderOpen = !isMobileHeaderOpen"/>
     <div class="content-wrapper" @click="isMobileHeaderOpen = false">
-      <DefaultGlobalLayout/>
+      <main>
+        <DefaultGlobalLayout/>
+      </main>
     </div>
     <Footer/>
   </div>
