@@ -36,4 +36,7 @@ export default {
         color #FFF
     .disabled
       text-decoration line-through
+@media (max-width: $MQMobile)
+  .terminal-pagination
+    font-size: 2em
 </style>
