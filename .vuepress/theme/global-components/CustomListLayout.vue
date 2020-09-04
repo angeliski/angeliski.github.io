@@ -3,12 +3,12 @@
     <div class="terminal">
         <header class="terminal-header">
             <nav class="terminal-header-nav">
-                <button class="terminal-close-button">
-                </button>
-                <button class="terminal-minimaze-button">
-                </button>
-                <button class="terminal-maximize-button">
-                </button>
+                <i class="terminal-close-button">
+                </i>
+                <i class="terminal-minimaze-button">
+                </i>
+                <i class="terminal-maximize-button">
+                </i>
             </nav>
             <div class="terminal-title">@angeliski_</div>
         </header>

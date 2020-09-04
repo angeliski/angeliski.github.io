@@ -6,6 +6,9 @@ module.exports = {
   port: 8085,
   theme: 'theme',
   themeConfig: {
+    sitemap: {
+      hostname: 'https://angeliski.com.br',
+    },
     modifyBlogPluginOptions(blogPluginOptions){
       const comment = {
         service: 'disqus',
@@ -50,7 +53,19 @@ module.exports = {
       ]
   },
 },
+locales: {
+  '/': {
+    lang: 'pt-BR',
+  },
+},
 plugins: {
+  'vuepress-plugin-seo': {
+    //...
+    customMeta: (add, context) => {
+        add('twitter:site', "https://twitter.com/angeliski_")
+        add('viewport', 'width=device-width, initial-scale=1')
+    },
+},
   '@vuepress/medium-zoom': {
     selector: 'img.zoom-custom-imgs',
     // medium-zoom options here
