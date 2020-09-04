@@ -1,6 +1,6 @@
 <template>
   <figure  style="text-align: center">
-  <img :src="src" :width="width" class="zoom-custom-imgs">
+  <img :src="src" :width="width" class="zoom-custom-imgs" :alt="caption">
   <figcaption v-if="caption">{{caption}}</figcaption>
 </figure>
 </template>
