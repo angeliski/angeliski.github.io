@@ -58,8 +58,11 @@ https://github.com/elijahmanor/spectacle-terminal
   flex-direction: column
   flex 1
   max-width 50%
-  @media (max-width: $MQMobile)
+  @media (max-width: $MQIpadPro)
     max-width 90%
+    font-size: 1.5rem
+  @media (max-width: $MQNarrow)
+    font-size: 1.4rem
 
 .terminal-header 
   position: relative

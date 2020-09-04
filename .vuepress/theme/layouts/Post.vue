@@ -28,7 +28,7 @@ import { Comment } from '@vuepress/plugin-blog/lib/client/components'
 
 <style lang="stylus">
   .vuepress-blog-theme-content
-    font-size 16px
+    font-size 1rem
     letter-spacing 0px
     font-family PT Serif, Serif
     color #2c3e50
@@ -36,6 +36,9 @@ import { Comment } from '@vuepress/plugin-blog/lib/client/components'
     max-width: 70%
     padding: 2rem;
     margin: auto;
+    @media (max-width: $MQIpadPro)
+      font-size: 2rem
+
     
     @media(min-width: $MQNarrow)
       box-shadow: 0 10px 20px rgba(0,0,0,0.05), 0 6px 6px rgba(0,0,0,0.07)
