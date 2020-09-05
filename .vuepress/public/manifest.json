@@ -1,0 +1,22 @@
+{ 
+    "short_name": "Angeliski",
+    "name": "Rogerio Angeliski Blog",
+    "description": "Meu blog pessoal",
+    "theme_color": "#2196f3",
+    "background_color": "#2196f3",
+    "display": "fullscreen",
+    "scope": "/",
+    "start_url": "/",
+    "icons": [
+      {
+        "src": "/icons/manifest-icon-192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/icons/manifest-icon-512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ]
+  }
