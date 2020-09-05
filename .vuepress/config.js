@@ -6,6 +6,13 @@ module.exports = {
   port: 8085,
   theme: 'theme',
   themeConfig: {
+    dateFormat: 'DD-MM-YYYY',
+    globalPagination: {
+      prevText: "Voltar",
+      nextText: "Avançar",
+      lengthPerPage: 5,
+    },
+
     sitemap: {
       hostname: 'https://angeliski.com.br',
     },
@@ -19,8 +26,12 @@ module.exports = {
         // clientId: 'Your clientId',
         // clientSecret: 'Your clientSecret',
       }
+      globalPagination = {
+        prevText: "Voltar",
+        nextText: "Avançar"
+      }
 
-      return { ...blogPluginOptions, comment }
+      return { ...blogPluginOptions, comment, globalPagination }
     },
     nav: [
       {
