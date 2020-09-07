@@ -2,7 +2,7 @@
 
 # Angeliski Blog
 
-Bem vindo ao meu blog pessoal. Ele foi feito usando o [vuepress](https://vuepress.vuejs.org/) e o [plugin de blog](https://vuepress.vuejs.org/plugin/official/plugin-blog.html).
+Bem vindo ao meu blog pessoal. Ele foi feito usando o [Gatsby](https://github.com/willianjusten/gatsby-course) e o curso [Gatsby: Crie um site PWA com React, GraphQL e Netlify CMS](https://www.udemy.com/course/gatsby-crie-um-site-pwa-com-react-graphql-e-netlify-cms/).
 
 Rodar ele é muito simples:
 
