@@ -2,7 +2,7 @@ backend:
   name: github
   repo: angeliski/angeliski.github.io
   branch: master
-  site_domain: angeliski.netlify.app
+  site_domain: angeliski.com.br
 
 publish_mode: editorial_workflow
 media_folder: "static/assets/img"

@@ -101,7 +101,7 @@ module.exports = {
     position: `Software Engineer`,
     description: `O lugar onde eu compartilho as coisas bacanas que eu aprendi`,
     author: `@angeliski_`,
-    siteUrl: `https://angeliski.netlify.app`,
+    siteUrl: `https://angeliski.com.br`,
   },
   plugins
 }
