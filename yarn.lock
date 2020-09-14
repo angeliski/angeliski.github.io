@@ -6510,9 +6510,10 @@ gatsby-remark-images@^3.1.12:
     unist-util-select "^1.5.0"
     unist-util-visit-parents "^2.0.1"
 
-gatsby-remark-lazy-load@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-lazy-load/-/gatsby-remark-lazy-load-1.0.1.tgz#c771c708eb76fa50ea9ba95ede7531f837d80648"
+gatsby-remark-lazy-load@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-lazy-load/-/gatsby-remark-lazy-load-1.0.2.tgz#967f8f9163e162c9a022e2516c802326fc8b347b"
+  integrity sha512-u9BuKr+oQ2UTcpRIqjLVe0C4rL0zdc1W3vmQFOAF4+0tnTjuUWkjTJSgAsYl8fQDlBmZ1iixEBc3JrWHOXfATg==
   dependencies:
     unist-util-visit-parents "^2.0.1"
 
