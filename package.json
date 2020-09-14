@@ -46,7 +46,7 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-instantsearch-dom": "^5.7.0",
-    "styled-components": "^4.3.2",
+    "styled-components": "^4.4.1",
     "styled-icons": "^8.3.0",
     "styled-media-query": "^2.1.2",
     "super-react-gist": "^1.0.4"
