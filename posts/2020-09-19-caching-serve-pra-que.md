@@ -16,13 +16,13 @@ Vamos pensar num exemplo que não é de programação: **Supermercado**.
 
 Você precisa fazer o almoço, não tem nada em casa, então você vai até o supermercado, compra algumas coisas pra cozinhar, volta pra casa e faz o almoço. Beleza;
 
-Dai você precisa fazer a janta. Você vai ao supermercado de novo? Provavelmente não, porque você deve ter feito _**cache**_ das compras na sua geladeira. 
+Dai você precisa fazer a janta. Você vai ao supermercado de novo? Provavelmente não, porque você deve ter feito **_cache_** das compras na sua geladeira. 
 
 Como assim? 
 
 Quando você foi no supermercado, você guardou ingredientes na sua geladeira para **usar depois, de maneira mais rápida**.
 
-Supondo que no almoço você tenha gastado 2h indo até o supermercado, quando você precisou fazer a janta, deve ter gastado no máximo 5min indo até a geladeira para pegar os ingredientes. Percebe como o _**cache**_ permitiu que o acesso aos seus igredientes seja muito mais rápido? Imagine como seria complicado se você tivesse que ir até o supermercado toda vez que precisa-se fazer comida?
+Supondo que no almoço você tenha gastado 2h indo até o supermercado, quando você precisou fazer a janta, deve ter gastado no máximo 5min indo até a geladeira para pegar os ingredientes. Percebe como o **_cache_** permitiu que o acesso aos seus igredientes seja muito mais rápido? Imagine como seria complicado se você tivesse que ir até o supermercado toda vez que precisa-se fazer comida?
 
 Esse mesmo conceito se aplica para quando você faz cache de páginas web (HTTP caching), cache de requisições no banco de dados(database caching), cache de memória(memory caching) e muitos outros lugares. 
 
@@ -40,7 +40,7 @@ Agora imagina que a sua mãe fez um bolo de aniversário pra ti. Você colocou n
 
 É comum o cache seja em memória, ou em algum outro tipo de localidade volátil, ou seja, a informação que está lá pode ser removida ou perdida muito facilmente.
 
-## Qual o tempo que sua informação leva para ficar desatualizada no cache? 
+## Qual o tempo que sua informação leva para ficar desatualizada no cache?
 
 Uma das coisas importantes pra se considerar quando a gente fala de caching é quanto tempo aquela informação leva para ficar desatualizada. No nosso exemplo da geladeira, você pode pensar na comida estragada. Quanto tempo leva para o leite estragar na geladeira?
 
@@ -86,7 +86,7 @@ Pra fechar, vamos falar de prós e contras de usar cache.
 
 Show, você aprendeu várias paradas sobre cache então é só sair usando em todo lado né?
 
-![Moça negra com pano amarrado na cabeça falando pare em inglês](/assets/img/stop.gif "Parou!")
+<ImagePoster caption="Moça negra com pano amarrado na cabeça falando pare em inglês" src="/assets/img/stop.gif" />
 
 **Calma. Não é assim.** 
 
@@ -107,8 +107,6 @@ Galera, espero que vocês tenham aprendido bastante coisa sobre cache hoje, vou 
 Qualquer dúvida, manda um comentário ai pra gente trocar ideia. Falou!
 
 <Signature></Signature>
-
-
 
 ## Referências
 
