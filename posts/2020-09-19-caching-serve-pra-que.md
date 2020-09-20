@@ -3,7 +3,7 @@ title: Caching - Serve pra que?
 description: >-
   Vamos entender o que é caching e detalhes importantes pra não fazer o uso
   indevido dessa técnica no desenvolvimento de software
-date: '2020-09-19 10:01:00'
+date: '2020-09-20 06:01:00'
 image: ''
 category: iniciante
 background: '#B31917'
