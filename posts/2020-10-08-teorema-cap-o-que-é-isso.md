@@ -5,8 +5,6 @@ date: '2020-10-08 04:50:00'
 category: iniciante
 background: '#B31917'
 ---
-Quando a gente começa a estudar aplicações escaláveis e sobre sistemas distribuidos, um dos tópicos que aparece bastante é sobre o Teorema CAP (ou Teorema de Brewer), que fala basicamente sobre as escolhas que você precisa tomar para obter um determinado resultado no seu sistema:
-
 <ImagePoster caption="Imagem com os três pontos do teorema: consistência, disponibilidade e partição tolerante a falhas" src="/assets/img/teorema_cap.png" />
 
 Bora entender como usar isso no desenvolvimento das nossas aplicações?
@@ -33,11 +31,9 @@ Aqui vale entender que a velocidade da consistência é relativa a necessidade, 
 
 O segredo por trás da disponibilidade é garantir que as partições do sistema estejam sempre acessiveis o mais acessivel possível. É comum você ver por ai as pessoas falarem em disponibilidade com base na quantidade de 9 que elas conseguem prover: 
 
-Quatro noves - 99,99% disponível, ou 52,60 minutos de indisponibilidade por ano
-
-Cinco noves - 99,999% disponível, ou 5,26 minutos de indisponibilidade por ano
-
-Seis noves - 99,9999% disponível, ou 31,56 segundos de indisponibilidade por ano
+* Quatro noves - 99,99% disponível, ou 52,60 minutos de indisponibilidade por ano
+* Cinco noves - 99,999% disponível, ou 5,26 minutos de indisponibilidade por ano
+* Seis noves - 99,9999% disponível, ou 31,56 segundos de indisponibilidade por ano
 
 Isso quer dizer que quanto maior sua disponibilidade, menor é o tempo que o seu usuário fica sem acessar essa informação quando necessário. Vamos voltar no nosso exemplo do Twitter, quando nós provemos uma alta disponibilidade, nós garantimos que seja um usuário acessando a uma da tarde, ou uma da manhã, ele vai conseguir acessar o site, ver postagens, alterar informações da conta e fazer tudo que o Twitter tem a oferecer. Aqui também vale entender que a disponibilidade necessária varia de acordo com a sua necessidade de negócio: O Twitter ficar fora 1h é completamente diferente do sistema de tráfego aéreo fora por 1h. 
 
