@@ -52,6 +52,7 @@ export const MainContent = styled.section`
   margin: auto;
   max-width: 70rem;
   padding: 2rem 5rem;
+  text-align: justify;
 
   ${media.lessThan("large")`
     padding: 2rem 0;
