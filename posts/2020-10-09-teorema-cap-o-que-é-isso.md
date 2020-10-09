@@ -12,10 +12,10 @@ background: '#B31917'
 ---
 <ImagePoster caption="Imagem com os três pontos do teorema: consistência, disponibilidade e partição tolerante a falhas" src="/assets/img/teorema_cap.png" />
 
-
+<br/>
+<br/>
 
 Bora entender como usar isso no desenvolvimento das nossas aplicações?
-
 ## Entendendo o teorema
 
 Vamos começar entendendo o que é o teorema e o que ele significa. Serei breve aqui porque já existem ótimos materiais falando disso (deixarei  o link nas referências, caso você tenha dúvidas):
