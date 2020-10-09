@@ -74,7 +74,7 @@ Eu vou dedicar um tempo para escrever só sobre isso, mas é importante entender
 
 
 
-Você não precisa necessariamente escolher entre consistência e disponibilidade. 
+## Você não precisa necessáriamente escolher entre consistência e disponibilidade
 
 Um erro comum de quem está começando nesse assunto (que eu cometi também) é acreditar que, uma vez que você escolhe entre um deles, você precisa eliminar completamente o outro. Não é verdade, é mais como um cabo de guerra. Quanto mais você puxar para um lado, mais difícil será para  o outro.
 
@@ -85,14 +85,6 @@ Se você aumentar sua disponibilidade, a consistência começará a ficar prejud
 
 
 Isso não quer dizer que você não possa obter um resultado interessante combinando estratégias. Um exemplo bem comum é o uso da consistência eventual: o sistema favorece a disponibilidade e é convencionado que eventualmente o sistema chegará ao estado consistente (pode ser uma questão de tempo, ou até de recuperação de uma falha de rede).
-
-## Você não precisa necessáriamente escolher entre consistência e disponibilidade
-
-Um erro comum de quem está começando nesse assunto (que eu cometi também) é acreditar que uma vez que você escolhe entre um deles, você precisa eliminar completamente o outro. Não é verdade, é mais como um cabo de guerra. Quanto mais você puxar para um lado, mais dificil será ter o outro lado. 
-
-Se você aumentar sua disponibilidade, a consistência começa a ficar prejudicada pois a falha na rede é inevitável, então é inevitável que em algum momento seu sistema ficara inconsistênte. Se você aumentar a consistência, sua disponibilidade ficara prejudicada, pois quando a falha de rede acontecer você será obrigado a negar a informação devido a inconsistência.
-
-Isso não quer dizer que você não possa obter um resultado interessante combinando estratégias. Um exemplo bem comum é o uso da consistência eventual: O sistema favorece a disponibilidade e é convencionando que eventualmente o sistema chegara ao estado consistente (pode ser uma questão de tempo, ou até de recuperação de uma falha de rede).
 
 ## Favoreça consistência ao invés de disponibilidade
 
