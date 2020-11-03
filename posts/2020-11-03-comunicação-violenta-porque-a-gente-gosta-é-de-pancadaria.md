@@ -207,3 +207,5 @@ Os 4 componentes que discutimos:
 * Os **pedidos** claros irão alinhar o resultado do diálogo. 
 
 Eu recomendo a leitura do livro do Rosenberg, mas sempre que possível vou tentar trazer algumas releituras e insights aqui.
+
+<Signature></Signature>
