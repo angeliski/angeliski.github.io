@@ -2,7 +2,7 @@ import React from "react"
 
 const Signature = () => (
   <div>
-    <p>Dúvidas? Gostou? Me acha um idiota?</p>
+    <p>Dúvidas? Gostou? Achou que ficou faltando algo?</p>
 
     <p>Comenta ai!!</p>
 
