@@ -1,6 +1,6 @@
 ---
 title: Comunicação Violenta - Porque a gente gosta é de pancadaria
-description: Bora entender porque que tem sido tão complicado você se comunicar na vida?
+description: Bora entender como se comunicar na vida de uma forma mais efetiva?
 date: '2020-11-03 04:30:50'
 category: carreira
 background: '#7D669E'
