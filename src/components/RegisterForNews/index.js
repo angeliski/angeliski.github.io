@@ -1,21 +1,16 @@
 import React from "react"
 
 import * as S from "./styled"
-class ConvertKitForm extends React.Component {
-  componentDidMount() {
-    if (!process.env.NODE_ENV || process.env.NODE_ENV === "development") return
-    const script = document.createElement("script")
-    script.src = "https://angeliski.ck.page/6e136032a3/index.js"
-    script.async = true
-    script.setAttribute("data-uid", "6e136032a3")
-    document.querySelector("#convert-kit").appendChild(script)
-  }
-
+class Newsletter extends React.Component {
   render() {
-    return <S.ConvertKitWrapper id="convert-kit" />
+    if (!process.env.NODE_ENV || process.env.NODE_ENV === "development") return (<></>)
+    return <S.ConvertKitWrapper
+    dangerouslySetInnerHTML={{
+      __html: `<iframe src="https://maestria.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>`
+    }}/>
   }
 }
 
-const RegisterForNews = () => <ConvertKitForm />
+const RegisterForNews = () => <Newsletter />
 
 export default RegisterForNews
