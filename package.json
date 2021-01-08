@@ -14,7 +14,6 @@
     "@styled-icons/material": "^10.18.0",
     "@styled-icons/material-outlined": "^10.18.0",
     "@styled-icons/material-rounded": "^10.18.0",
-    "convertkit-react": "^1.4.2",
     "dotenv": "^8.1.0",
     "gatsby": "^2.13.50",
     "gatsby-image": "^2.2.8",
