@@ -63,7 +63,7 @@ const plugins = [
   {
     resolve: `gatsby-plugin-manifest`,
     options: {
-      name: `Blog do Rogerio Angeliski`,
+      name: `Rogerio Angeliski - Blog`,
       short_name: `Angeliski`,
       start_url: `/`,
       background_color: `#16202c`,
@@ -77,6 +77,67 @@ const plugins = [
   // To learn more, visit: https://gatsby.dev/offline
   `gatsby-plugin-offline`,
   `gatsby-plugin-netlify-cms`,
+  {
+    resolve: `gatsby-plugin-feed`,
+    options: {
+      query: `
+        {
+          site {
+            siteMetadata {
+              title
+              position,
+              description
+              author
+              siteUrl
+              site_url: siteUrl
+            }
+          }
+        }
+      `,
+      feeds: [
+        {
+          serialize: ({ query: { site, allMdx } }) => {
+            return allMdx.edges.map(edge => {
+              return Object.assign({}, edge.node.frontmatter, {
+                description: edge.node.frontmatter.description,
+                date: edge.node.frontmatter.date,
+                category: edge.node.frontmatter.category,
+                url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                link: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                custom_elements: [{ 'content:encoded': edge.node.html }]
+              })
+            })
+          },
+          query: `
+            {
+              allMdx(
+                sort: { fields: frontmatter___date, order: DESC }) {
+                edges {
+                  node {
+                    fields {
+                      slug
+                    }
+                    frontmatter {
+                      category
+                      date
+                      description
+                      title
+                    }
+                    excerpt
+                    html
+                    timeToRead
+                  }
+                }
+              }
+            }
+          `,
+          output: '/feed.xml',
+          title: 'Rogerio Angeliski - Blog - RSS Feed'
+        }
+      ]
+    }
+  }
 ];
 
 if(process.env.BRANCH === "master"){

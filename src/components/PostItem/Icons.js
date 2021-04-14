@@ -6,7 +6,8 @@ import { HighQuality } from "@styled-icons/material-outlined/HighQuality"
 import { Tools } from "@styled-icons/fa-solid/Tools"
 import { Mountain } from "@styled-icons/fa-solid/Mountain"
 
-export default {
+
+const icons = {
   iniciante: Mountain,
   programação: Computer,
   sql: Database,
@@ -15,3 +16,4 @@ export default {
   qualidade: HighQuality,
   ferramental: Tools,
 }
+export default icons
