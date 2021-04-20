@@ -11,7 +11,7 @@ const PageWrapper = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
-  
+
   width: 100%;
   margin: auto;
   max-width: 70rem;
@@ -37,7 +37,7 @@ const PageText = styled.p`
 `
 
 
-export const BackLink = styled(AniLink)`
+const BackLink = styled(AniLink)`
   transition: color 0.5s;
   color: var(--postColor);
   font-size: 2.1rem;
@@ -54,7 +54,7 @@ const NotFoundPage = () => (
       <PageTitle>404</PageTitle>
       <PageText>Página não encontrada</PageText>
       <PageText>Volte até o último posto espacial e peça ajuda</PageText>
-      <BackLink>Voltar</BackLink>
+      <BackLink to="/">Voltar</BackLink>
     </PageWrapper>
   </Layout>
 )
