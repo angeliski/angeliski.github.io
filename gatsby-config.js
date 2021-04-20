@@ -164,5 +164,8 @@ module.exports = {
     author: `@angeliski_`,
     siteUrl: `https://angeliski.com.br`,
   },
-  plugins
+  plugins,
+  flags: {
+    DEV_SSR: false,
+  }
 }
