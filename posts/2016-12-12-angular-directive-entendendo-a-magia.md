@@ -1,7 +1,7 @@
 ---
 title: "Angular Directive - Entendendo a magia"
 date: "2016-12-12"
-category: programação
+category: programacao
 description: Olhando pro baixo do capô do angular
 background: "#2DA0C3"
 ---
@@ -13,12 +13,12 @@ Um framework que contém muitas ferramentas é o **[AngularJs](https://angularjs
 A primeira coisa  que é interessante sabermos é qual é o propósito de uma diretiva. Quando estamos construindo uma aplicação existem certos pedaços dela que se repetem muito. Imagine que você está construindo uma aplicação para uma rede de sapatos,  em várias telas existe um combo que permite você escolher uma loja. Hora você usa esse combo num cadastro, outra hora em uma pesquisa. Dali a pouco você precisa dele num filtro de relatório. Imagine que esse combo é parecido com isso:
 
 
-``` 
+```
 <select class="select" name="loja">
     <option value="1">Loja 1</option>
     <option value="2">Loja 2</option>
     <option value="3">Loja 3</option>
- </select> 
+ </select>
 ```
 
 Esse código é simples, mas serve de exemplo. Você colocou esse combo em vinte lugares diferentes. Uma semana depois, teve uma loja nova, você precisou mudar em todos os lugares. Depois de um mês, a Loja 1 foi desativada por estar em obras, mais uma modificação... Percebe como é custoso ficar mudando isso?
@@ -66,7 +66,7 @@ angular.module('diretivaApp').directive('diretivaLoja', function (){ return { te
 Esse é o código mais simples do universo parar criar sua diretiva e você consegue usar ela simplesmente adicionando na sua página.
 
 ```
-<div diretiva-loja /> 
+<div diretiva-loja />
 ```
 
 Agora que nós já temos nossa diretiva, vamos tornar as coisas mais interessantes.
@@ -84,9 +84,9 @@ Quando estamos criando uma diretiva é importante saber como vamos aplicar ela, 
 A maneira como você vai fazer isso depende da sua necessidade, mas para que isso funcione você precisa adicionar na sua diretiva uma atributo chamado **[restricted](https://docs.angularjs.org/api/ng/service/$compile#directive-definition-object)**, veja um trecho da documentação:
 
 > #### `restrict`
-> 
+>
 > String of subset of `EACM` which restricts the directive to a specific directive declaration style. If omitted, the defaults (elements and attributes) are used.
-> 
+>
 > - `E` - Element name (default):
 > - `A` - Attribute (default): `` `<div my-directive="exp">` ``
 > - `C` - Class: `` `<div class="my-directive: exp;">` ``
@@ -204,13 +204,13 @@ angular.module('diretivaApp').controller('BuscaLojaController', function ($scope
 
 $scope.buscar = function (){ $scope.label = "Buscando..."; }
 
-$scope.label = "Buscar"; $scope.labelLoja = "Filiais"; }); 
+$scope.label = "Buscar"; $scope.labelLoja = "Filiais"; });
 ```
 
 Vejamos o que precisa ser feito na nossa diretiva
 
 ```
-angular.module('diretivaApp').directive('diretivaLoja', function (){ return { template: ' <div><label ng-bind="label" /><select class="select" name="loja"> <option value="1">Loja 1</option> <option value="2">Loja 2</option> <option value="3">Loja 3</option> </select></div> ', restrict: 'EACM', replace: true, scope: { label :'@?' }, link: function ($scope){ $scope.label = $scope.label || "Lojas"; } } }); 
+angular.module('diretivaApp').directive('diretivaLoja', function (){ return { template: ' <div><label ng-bind="label" /><select class="select" name="loja"> <option value="1">Loja 1</option> <option value="2">Loja 2</option> <option value="3">Loja 3</option> </select></div> ', restrict: 'EACM', replace: true, scope: { label :'@?' }, link: function ($scope){ $scope.label = $scope.label || "Lojas"; } } });
 ```
 
 Você pode observar que dentro do escopo que criamos na váriavel **scope** adicionamos o **label :'@?'. **O que isso significa? Primeiro o **label** é onde vamos atribuir aquele valor no escopo que estamos criando, no caso, queremos guardar nosso valor dentro de label. Depois vem o **@ ** que define como será o compartilhamento das váriaveis. Você pode usar três simbolos aqui:
@@ -228,7 +228,7 @@ Esse post já está enorme e eu vou falar somente de uma última coisa, o atribu
 Primeiro criamos uma página html (diretiva-loja-template.html) na raiz da nossa aplicação
 
 ```
-<div> <label ng-bind="label" /> <select class="select" name="loja"> <option value="1">Loja 1</option> <option value="2">Loja 2</option> <option value="3">Loja 3</option> </select></div> 
+<div> <label ng-bind="label" /> <select class="select" name="loja"> <option value="1">Loja 1</option> <option value="2">Loja 2</option> <option value="3">Loja 3</option> </select></div>
 ```
 
 E na nossa diretiva, ajustamos a **templateUrl **para apontar para essa página.

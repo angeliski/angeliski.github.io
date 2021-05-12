@@ -28,7 +28,7 @@ collections:
         label: "Category",
         name: "category",
         widget: "select",
-        options: ["iniciante", "programacão", "sql", "java", "carreira", "qualidade", "ferramental"]
+        options: ["iniciante", "programacao", "sql", "java", "carreira", "qualidade", "ferramental"]
       }
       - {
         label: "Background",

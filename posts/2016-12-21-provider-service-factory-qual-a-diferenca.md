@@ -1,7 +1,7 @@
 ---
 title: "Provider, Service, Factory - Qual a diferença?"
 date: "2016-12-21"
-category: programação
+category: programacao
 description: Olhando pro baixo do capô do angular
 background: "#2DA0C3"
 ---
@@ -13,20 +13,20 @@ Esse post nasceu de um pedido de um amigo que me ensinou muita coisa sobre Javas
 Pra já começar na polemica, eu vou te dizer que é tudo **[Provider](https://docs.angularjs.org/guide/providers)**. Se você dúvida, eu te mostro a documentação:
 
 > The injector creates two types of objects, **services** and **specialized objects**.
-> 
+>
 > Services are objects whose API is defined by the developer writing the service.
-> 
+>
 > Specialized objects conform to a specific Angular framework API. These objects are one of controllers, directives, filters or animations.
-> 
+>
 > The injector needs to know how to create these objects. You tell it by registering a "recipe" for creating your object with the injector. There are five recipe types.
-> 
+>
 > The most verbose, but also the most comprehensive one **is a Provider recipe**. The remaining **four recipe type**s — Value, Factory, Service and Constant — are just **syntactic sugar on top of a provider recipe**.
 
 O que isso diz é que basicamente, _**Value, Factory, Service e Constant**_ são Providers, mas com um atalho sintático para facilitar a nossa vida, ou seja, eles são providers encapsulados de uma maneira que seja mais fácil criar eles. Claro que na pratica isso cria diferenças entre eles, que é o que importa pra gente vamos ver aqui hoje.
 
 ### Value e Constant
 
-Esse dois são sem dúvidas os mais simples de entender. **Value** permite você definir um valor para ser injetado em outras partes da sua aplicação. Você pode querer fazer isso por exemplo para definir o clientId dentro da sua aplicação. 
+Esse dois são sem dúvidas os mais simples de entender. **Value** permite você definir um valor para ser injetado em outras partes da sua aplicação. Você pode querer fazer isso por exemplo para definir o clientId dentro da sua aplicação.
 ```js
 myApp.value('clientId', 'a12345654321x');
 
@@ -37,7 +37,7 @@ myApp.controller('DemoController', ['clientId', function DemoController(clientId
 
 Isso permite que você defina valores em uma parte do seu módulo e injete ele em outros.
 
-**Constant ** tem um funcionamento quase que igual, o que muda entre ele e o **Value** é que o **Constant **está disponível na fase de configuração. 
+**Constant ** tem um funcionamento quase que igual, o que muda entre ele e o **Value** é que o **Constant **está disponível na fase de configuração.
 
 ```js
 myApp.constant('planetName', 'Greasy Giant');
@@ -62,7 +62,7 @@ myApp.value('clientId', 'a12345654321x');
 
 myApp.factory('apiToken', ['clientId', function apiTokenFactory(clientId) {
     var encrypt = function(data1, data2) {
-        // NSA-proof encryption algorithm: 
+        // NSA-proof encryption algorithm:
         return (data1 + ':' + data2).toUpperCase();
     };
 
@@ -77,12 +77,12 @@ Como você pode ver, eu injetei a dependência do **Value**, em seguida gerei um
 
 ### Service
 
-O **Service** adiciona uma vantagem bem simples em  cima do **Factory**, ele cria instâncias únicas. A **Factory** e o **Service** abaixo tem o mesmo valor. 
+O **Service** adiciona uma vantagem bem simples em  cima do **Factory**, ele cria instâncias únicas. A **Factory** e o **Service** abaixo tem o mesmo valor.
 
 ```js
 this.launchedCount = 0;
 this.launch = function() {
-    // Make a request to the remote API and include the apiToken ... 
+    // Make a request to the remote API and include the apiToken ...
     this.launchedCount++;
 }
 
@@ -95,9 +95,9 @@ Com esse código fica simples de ver que o Service é só uma atalho semântico,
 
 ### Provider
 
-Se você sobreviveu até aqui merece meu respeito ser lembrado que o Provider é o core de todos esses já citados "recipientes". O que acontece que o Provider tem muitas opções de customizações e isso pode ser muito bom, mas para a maioria dos casos, é uma balão de canhão para matar formiga. Desse modo, nas coisas mais simples, você pode usar um Service, ou um Factory. Mas de repente, surge uma situação que você precisa usar um provider. Vamos dar uma olhada em um código. 
+Se você sobreviveu até aqui merece meu respeito ser lembrado que o Provider é o core de todos esses já citados "recipientes". O que acontece que o Provider tem muitas opções de customizações e isso pode ser muito bom, mas para a maioria dos casos, é uma balão de canhão para matar formiga. Desse modo, nas coisas mais simples, você pode usar um Service, ou um Factory. Mas de repente, surge uma situação que você precisa usar um provider. Vamos dar uma olhada em um código.
 
-```js 
+```js
 var useTinfoilShielding = false;
 
 this.useTinfoilShielding = function(value) {
@@ -105,8 +105,8 @@ this.useTinfoilShielding = function(value) {
 };
 
 this.$get = ["apiToken", function RocketLauncherFactory(apiToken) {
-    // let's assume that the RocketLauncher constructor was also changed to 
-    // accept and use the useTinfoilShielding argument 
+    // let's assume that the RocketLauncher constructor was also changed to
+    // accept and use the useTinfoilShielding argument
     return new RocketLauncher(apiToken, useTinfoilShielding);
 }];
 ```
@@ -124,9 +124,9 @@ RocketLauncherProvider.useTinfoilShielding(true); }]);
 
 Se você observar, no config, nós usamos o método useTinfoilShielding. Isso só é possível dentro da etapa de configuração, onde nós podemos customizar nosso provider, porque quando estamos dentro de um controller, ou dentro de um Service, esse método não pode ser chamado. Essa é uma das melhores características do **Provider**, a possibilidade de customização dele.
 
-Se você é daqueles céticos, vou deixar a baixo o código do [angular.js (versão 1.6.0).](https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.0/angular.js) 
+Se você é daqueles céticos, vou deixar a baixo o código do [angular.js (versão 1.6.0).](https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.0/angular.js)
 
-```js 
+```js
   function enforceReturnValue(name, factory) {
     return /** @this */ function enforcedReturnValue() {
       var result = instanceInjector.invoke(factory, this);
