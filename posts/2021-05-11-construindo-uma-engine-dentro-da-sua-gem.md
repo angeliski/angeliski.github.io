@@ -2,7 +2,7 @@
 title: Construindo uma Engine dentro da sua Gem
 description: Você sabe como entregar uma funcionalidade avaçada direto da sua Gem?
 date: 2021-05-11 07:54:28
-category: programacão
+category: programacao
 background: "#2DA0C3"
 ---
 Atualmente estou trabalhando no time de Devtools na [RD Station](https://grnh.se/44d568232us) e nosso time é responsável por melhorar o fluxo de trabalho dos desenvolvedores.
@@ -32,7 +32,7 @@ ps: Nesse caso eu optei por criar especificamente um plugin rails para facilitar
 
 A diferença é que ela não tem o parâmetro **mountable** no final.
 
-Agora vamos criar a classe que vai ser a nossa engine de fato e importar ela: 
+Agora vamos criar a classe que vai ser a nossa engine de fato e importar ela:
 
 ```ruby
 # lib/yoda/say/engine.rb
@@ -48,15 +48,15 @@ end
 require "yoda/say/engine"
 ```
 
-Isso é suficiente para nossa engine estar funcionando. O unico problema é que ela não faz nada. 
+Isso é suficiente para nossa engine estar funcionando. O unico problema é que ela não faz nada.
 ![Homem esfregando as temporas](https://media.giphy.com/media/FcuiZUneg1YRAu1lH2/giphy.gif)
 
 Agora vamos adicionar algumas coisas necessárias para nossa engine fazer alguma coisa:
 
 ```ruby
-# config/routes.rb 
+# config/routes.rb
 Yoda::Say::Engine.routes.draw do
-  get '/', to: 'home#index'  
+  get '/', to: 'home#index'
 end
 
 # app/controllers/home_controller.rb
@@ -113,7 +113,7 @@ Você não precisa de uma Engine.
 
 ![Joe Cruz se virando com um olhar de estranhamento](https://media.giphy.com/media/KGSxFwJJHQPsKzzFba/giphy.gif)
 
-Não, você não leu errado. 
+Não, você não leu errado.
 
 O que acontece é simples, apesar da Rails Engine ser uma coisa muito legal, ela carrega o "peso do Rails" junto dela (o que em alguns casos é o que nós queremos).
 
@@ -128,12 +128,12 @@ Primeiro vamos criar a nossa App:
 module Yoda
   module Say
     class App
-      
+
       def self.call(env)
         request = Rack::Request.new(env)
         [status, headers, body]
       end
-      
+
     end
   end
 end
@@ -178,7 +178,7 @@ Dito isso, podemos deletar o arquivo da engine e as definições de rotas que j�
 
 ## Pra fechar
 
-Nesse tutorial você viu **duas** maneiras de entregar recursos avançados dentro da sua aplicação principal através de uma gem. A primeira parte foi com uma Rails Engine e na sequência mudamos tudo para usar uma Rack App. 
+Nesse tutorial você viu **duas** maneiras de entregar recursos avançados dentro da sua aplicação principal através de uma gem. A primeira parte foi com uma Rails Engine e na sequência mudamos tudo para usar uma Rack App.
 
 Você pode estar se perguntando, como eu escolho qual usar?
 
