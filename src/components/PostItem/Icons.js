@@ -9,7 +9,7 @@ import { Mountain } from "@styled-icons/fa-solid/Mountain"
 
 const icons = {
   iniciante: Mountain,
-  programação: Computer,
+  programacao: Computer,
   sql: Database,
   java: Coffee,
   carreira: Work,

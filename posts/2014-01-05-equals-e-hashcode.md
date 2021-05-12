@@ -1,7 +1,7 @@
 ---
 title: "Equals e HashCode : O que é, porque usar e como implementar"
 date: "2014-01-05"
-category: programação
+category: programacao
 description: A dupla que faz a diferença nos seus algoritmos
 background: "#2DA0C3"
 ---
@@ -28,7 +28,7 @@ Toda essa explicação de hash é algo independente da linguagem, tabelas hash p
 Lembra que eu disse que pode haver uma colisão de informações? ou seja, podem ter dois dados num mesmo **bucket**. Através do método equals você pode determinar se os objetos são iguais. A ideia do equals é garantir que dois objetos são "significativamente iguais", ou seja, que os objetos tem uma valor igual dadas as suas propriedades.
 
 > "Falar é fácil, me mostre o código."
-> 
+>
 > Linus Torvalds
 
 ## Como implementar?
@@ -56,7 +56,7 @@ Segundo a Documentação do Java, o contrato(Regras) de equals() segue as seguin
 > - É simétrico: para qualquer valor de referência x e y, x.equals(y) deve retornar true se, e > somente se, y.equals(x) retornar true.
 > - É transitivo: para qualquer valor de referência de x, y e z, se x.equals(y) retornar true e > y.equals(z) também retornar true, então, x.equals(z) deve retornar true.
 > - É consistente: para qualquer valor de referência de x e y, múltiplas chamadas de x.equals(y) > retornarão consistentemente true ou consistentemente false, contanto que nenhuma informação   > usada nas comparações do objeto de equals tenha sido alterada.
-> 
+>
 > Para qualquer valor de referência x que não seja null, x.equals(null) deve retornar false.
 
 Como dito, são diretrizes, você não as precisa seguir. Só que sem seguir elas, sua implementação do equals não vai ser eficiente nem vai atender suas necessidades.[siga as diretrizes cara, vai por mim.]

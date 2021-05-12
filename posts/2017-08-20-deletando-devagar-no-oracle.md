@@ -1,7 +1,7 @@
 ---
 title: "Deletando devagar no Oracle?"
 date: "2017-08-20"
-category: programação
+category: programacao
 description: uma deleção deveria ser rápida, não é mesmo?
 background: "#2DA0C3"
 ---

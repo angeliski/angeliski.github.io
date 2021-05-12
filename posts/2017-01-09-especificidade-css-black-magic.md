@@ -1,7 +1,7 @@
 ---
 title: "Especificidade CSS - Black Magic!"
 date: "2017-01-09"
-category: programação
+category: programacao
 description: Uma informação que pode te ajudar a entender como o CSS funciona
 background: "#2DA0C3"
 ---
@@ -10,7 +10,7 @@ A minha principal formação vem do backend e por consequência, sempre existiu 
 
 # Seletores
 
-A primeira coisa que nós precisamos entender quando estamos falando de css é que seu funcionamento se baseia no conceito de seletores. Que são maneiras que o css tem para encontrar um conteúdo X (desde uma div, até um simples span) e aplicar nesse conteúdo o valor das regras definidas. Vamos ver um exemplo. 
+A primeira coisa que nós precisamos entender quando estamos falando de css é que seu funcionamento se baseia no conceito de seletores. Que são maneiras que o css tem para encontrar um conteúdo X (desde uma div, até um simples span) e aplicar nesse conteúdo o valor das regras definidas. Vamos ver um exemplo.
 
 ```html
 <div class="conteudo-site"></div>
@@ -20,9 +20,9 @@ A primeira coisa que nós precisamos entender quando estamos falando de css é q
 }
 ```
 
-Esse é um dos usos básicos, definimos uma classe na nossa div e atribuímos uma regra para essa classe. Existe um conjunto de seletores, que podem ser usados no css e esse não é o enfoque deste artigo. Mas vamos a um segundo exemplo. 
+Esse é um dos usos básicos, definimos uma classe na nossa div e atribuímos uma regra para essa classe. Existe um conjunto de seletores, que podem ser usados no css e esse não é o enfoque deste artigo. Mas vamos a um segundo exemplo.
 
-```html 
+```html
 <div class="conteudo-site" id="principal"></div>
 .conteudo-site{
    background-color: red;
@@ -30,7 +30,7 @@ Esse é um dos usos básicos, definimos uma classe na nossa div e atribuímos u
 #principal{
    background-color:green;
 }
-``` 
+```
 
 Nesse caso, dois seletores se aplicam a div, tanto a classe quanto o id. Você sabe qual vai ser a cor aplicada na div? Se você conhece um pouco de css sabe que é a cor aplicada vai ser a verde. Mas a pergunta verdadeira é, você sabe porque é a cor verde?
 
@@ -43,14 +43,14 @@ Imagine que todo seletor, tem um peso, composto por 4 números: prioridade, id,
 - conteudo-site = 0010
 - principal = 0100
 
-Se você observar, o valor obtido pelo seletor do ID é maior que o da classe. Isso define que o seletor aplicado vai ser o ID e não a classe. Acontece que esse peso é registrado pelo número de itens de um certo elemento. Imagine o seguinte seletor: 
-```css 
+Se você observar, o valor obtido pelo seletor do ID é maior que o da classe. Isso define que o seletor aplicado vai ser o ID e não a classe. Acontece que esse peso é registrado pelo número de itens de um certo elemento. Imagine o seguinte seletor:
+```css
 .conteudo div p span {
     font-size: 13px;
 }
-``` 
+```
 
-O valor desse seletor segue a mesma regra. Temos o valor 0013, pois existem 3 elementos (quarto número) e apenas ma classe(terceiro número). Fica um pouco confuso não? Talvez uma imagem ajude: 
+O valor desse seletor segue a mesma regra. Temos o valor 0013, pois existem 3 elementos (quarto número) e apenas ma classe(terceiro número). Fica um pouco confuso não? Talvez uma imagem ajude:
 
 <ImagePoster caption="Especificidade" src="/assets/img/css_specificity.png"></ImagePoster>
 
