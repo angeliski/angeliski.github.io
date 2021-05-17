@@ -14,7 +14,7 @@
     "@styled-icons/material": "^10.28.0",
     "@styled-icons/material-outlined": "^10.28.0",
     "@styled-icons/material-rounded": "^10.28.0",
-    "dotenv": "^8.2.0",
+    "dotenv": "^8.6.0",
     "gatsby": "^3.4.1",
     "gatsby-image": "^3.3.0",
     "gatsby-mdx": "^1.0.0",
@@ -46,13 +46,13 @@
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
     "react-instantsearch-dom": "^6.11.0",
-    "styled-components": "^5.2.3",
+    "styled-components": "^5.3.0",
     "styled-icons": "^10.33.0",
     "styled-media-query": "^2.1.2",
     "super-react-gist": "^1.0.4"
   },
   "devDependencies": {
-    "prettier": "^2.2.1"
+    "prettier": "^2.3.0"
   },
   "keywords": [
     "gatsby"
