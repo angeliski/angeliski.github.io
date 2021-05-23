@@ -1,7 +1,7 @@
 ---
 title: Construindo uma Engine dentro da sua Gem
 description: Você sabe como entregar uma funcionalidade avaçada direto da sua Gem?
-date: 2021-05-11 07:54:28
+date: 2021-05-23
 category: programacao
 background: "#2DA0C3"
 ---
