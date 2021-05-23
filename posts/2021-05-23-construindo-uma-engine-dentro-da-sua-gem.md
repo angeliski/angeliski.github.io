@@ -1,6 +1,6 @@
 ---
 title: Construindo uma Engine dentro da sua Gem
-description: Você sabe como entregar uma funcionalidade avaçada direto da sua Gem?
+description: Você sabe como entregar uma funcionalidade avançada direto da sua Gem?
 date: 2021-05-23
 category: programacao
 background: "#2DA0C3"
@@ -11,7 +11,7 @@ Uma das tarefas recentes que nós entregamos foi de disponibilizar uma [gem](htt
 
 # Construindo uma Engine
 
-Uma rails engine, para quem não sabe, nada mais é que uma "mini aplicação" rails, que permite que você adicione funcionalidades na aplicação principal (Rotas, serviços e outras coisas). Criar uma engine é bem simple:
+Uma rails engine, para quem não sabe, nada mais é que uma "mini aplicação" rails, que permite que você adicione funcionalidades na aplicação principal (Rotas, serviços e outras coisas). Criar uma engine é bem simples:
 
 ```shell
 rails plugin new yoda-say --mountable
@@ -19,7 +19,7 @@ rails plugin new yoda-say --mountable
 
 Apenas executando isso uma nova gem será gerada com todos os arquivos necessários para você sair usando. Eis que surge o primeiro problema:
 
-Isso funciona bem para uma gem nova, não para uma que já existe.
+Isso funciona bem para uma gem nova, não para uma que já existe (que era o meu caso).
 
 ![Bob Esponja sentado triste na mesa](https://media.giphy.com/media/ISOckXUybVfQ4/giphy.gif)
 
@@ -78,7 +78,7 @@ end
 Mas como a gente adiciona testes?
 ![Mulher dando um sorriso e ficando chocada em seguida](https://media.giphy.com/media/jsZcIPaXpSTGLCj4yG/giphy.gif)
 
-Acontece que quando nós geramos a nnosa gem (como plugin rails) foi criada uma aplicação boba para testarmos (ela está em `test/dummy`), então só precisamos mudar algumas coisas:
+Acontece que quando nós geramos a nossa gem (como plugin rails) foi criada uma aplicação boba para testarmos (ela está em `test/dummy`), então só precisamos mudar algumas coisas nela:
 
 ```ruby
 # test/dummy/config/routes.rb
@@ -115,7 +115,7 @@ Você não precisa de uma Engine.
 
 Não, você não leu errado.
 
-O que acontece é simples, apesar da Rails Engine ser uma coisa muito legal, ela carrega o "peso do Rails" junto dela (o que em alguns casos é o que nós queremos).
+O que acontece é simples, apesar da Rails Engine ser uma coisa muito legal, ela carrega o "peso do Rails" junto dela (o que em alguns casos é o que nós queremos, então tudo bem).
 
 Além disso ela só pode ser plugada em uma aplicação Rails, o que pode ser um problema caso você queira oferecer isso para alguém que usa [Sinatra](http://sinatrarb.com/) por exemplo.
 
@@ -139,7 +139,7 @@ module Yoda
 end
 ```
 
-A aplicação é bem simples, você recebe um request, processa ele (nós vamos fazer isso no controller) e devolve um array com três posições: Status, header e body.
+A aplicação é bem simples, você recebe um request, processa ele (nós vamos fazer isso no controller) e devolve um array com três posições: status (número), header(hash) e body (array).
 
 Vamos ajustar nossa aplicação para ela funcionar corretamente:
 
