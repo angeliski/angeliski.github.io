@@ -79,6 +79,7 @@ exports.createPages = ({ graphql, actions }) => {
         },
       })
 
+      if(!node.frontmatter.page) {
       const pathSlug = `/${node.fields.slug.split('/').slice(4).join('')}/`
 
       createPage({
@@ -92,9 +93,7 @@ exports.createPages = ({ graphql, actions }) => {
           nextPost: previous,
         },
       })
-
-
-      
+      }
     })
 
     const postsPerPage = 6
