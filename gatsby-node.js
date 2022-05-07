@@ -17,7 +17,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       node,
       name: "slug",
-      value: `${slug.slice(0,12).replace(/-/g, '/')}${slug.slice(12)}`,
+      value: slug,
     })
   }
 }
@@ -78,22 +78,6 @@ exports.createPages = ({ graphql, actions }) => {
           nextPost: previous,
         },
       })
-
-      if(!node.frontmatter.page) {
-      const pathSlug = `/${node.fields.slug.split('/').slice(4).join('')}/`
-
-      createPage({
-        path: pathSlug,
-        component: path.resolve(`./src/templates/${node.frontmatter.page ? 'blog-page.js' : 'blog-post.js'}`),
-        context: {
-          // Data passed to context is available
-          // in page queries as GraphQL variables.
-          slug: node.fields.slug,
-          previousPost: next,
-          nextPost: previous,
-        },
-      })
-      }
     })
 
     const postsPerPage = 6
