@@ -1,5 +1,5 @@
 ---
-title: "Especificidade CSS - Black Magic!"
+title: "Especificidade CSS - Magic!"
 date: "2017-01-09"
 category: programacao
 description: Uma informação que pode te ajudar a entender como o CSS funciona
