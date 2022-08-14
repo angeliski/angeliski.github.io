@@ -17,7 +17,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       node,
       name: "slug",
-      value: `${slug.slice(0,12).replace(/-/g, '/')}${slug.slice(12)}`,
+      value: slug,
     })
   }
 }
