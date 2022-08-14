@@ -1,4 +1,0 @@
-[[redirects]]
-  from = "/:year/:month/:date/:slug"
-  to = "/:slug"
-  status = 301
